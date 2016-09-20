@@ -1,0 +1,346 @@
+{
+  "env": {
+    "SHELL": "/bin/zsh",
+    "TERM": "xterm-256color"
+  },
+  "height": 24,
+  "stdout": [
+    [
+      0.189339,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    ],
+    [
+      2.7e-05,
+      "\u001b]2;cchampeau@cedric-XPS-15: ~/tmp/demo\u0007\u001b]1;~/tmp/demo\u0007"
+    ],
+    [
+      0.033358,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[44m\u001b[30m ~/tmp/demo \u001b[43m\u001b[34m\u001b[30m  step3 \u001b[49m\u001b[33m\u001b[39m \u001b[K"
+    ],
+    [
+      9e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      1.4e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      0.748844,
+      "c"
+    ],
+    [
+      0.176472,
+      "\bca"
+    ],
+    [
+      0.173866,
+      "t"
+    ],
+    [
+      0.164579,
+      " "
+    ],
+    [
+      0.087211,
+      "b"
+    ],
+    [
+      0.143384,
+      "u"
+    ],
+    [
+      0.077199,
+      "i"
+    ],
+    [
+      0.268664,
+      "l"
+    ],
+    [
+      0.257051,
+      "d"
+    ],
+    [
+      0.580737,
+      "."
+    ],
+    [
+      0.308695,
+      "gradle\u001b[1m \u001b[0m"
+    ],
+    [
+      0.358548,
+      "\b\u001b[0m \b"
+    ],
+    [
+      2e-05,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      1.1e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000618,
+      "\u001b]2;cat build.gradle\u0007\u001b]1;cat\u0007"
+    ],
+    [
+      0.000975,
+      "subprojects {\r\n   apply plugin: 'java'\r\n   apply plugin: Jigsaw\r\n}\r\n"
+    ],
+    [
+      0.000132,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    ],
+    [
+      7.8e-05,
+      "\u001b]2;cchampeau@cedric-XPS-15: ~/tmp/demo\u0007\u001b]1;~/tmp/demo\u0007"
+    ],
+    [
+      0.033947,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[44m\u001b[30m ~/tmp/demo \u001b[43m\u001b[34m\u001b[30m  step3 \u001b[49m\u001b[33m\u001b[39m \u001b[K\u001b[?1h\u001b="
+    ],
+    [
+      4.1e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      2.991122,
+      "c"
+    ],
+    [
+      0.22369,
+      "\bca"
+    ],
+    [
+      0.226795,
+      "t"
+    ],
+    [
+      0.205701,
+      " "
+    ],
+    [
+      0.129134,
+      "c"
+    ],
+    [
+      0.273996,
+      "o"
+    ],
+    [
+      0.138517,
+      "r"
+    ],
+    [
+      0.251832,
+      "e\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.623813,
+      "\b\u001b[0m/b"
+    ],
+    [
+      0.146568,
+      "u"
+    ],
+    [
+      0.074583,
+      "i"
+    ],
+    [
+      0.259482,
+      "ld"
+    ],
+    [
+      0.447932,
+      "."
+    ],
+    [
+      0.18533,
+      "gradle\u001b[1m \u001b[0m"
+    ],
+    [
+      0.505994,
+      "\b\u001b[0m \b"
+    ],
+    [
+      2.5e-05,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      6.2e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000509,
+      "\u001b]2;cat core/build.gradle\u0007\u001b]1;cat\u0007"
+    ],
+    [
+      0.000948,
+      "repositories {\r\n    jcenter()\r\n}\r\n\r\ndependencies {\r\n    compile project(':utils')\r\n}\r\n\r\ntask run(type: JavaExec) {                                                      \r\n   dependsOn java8Jar                                                                \r\n   classpath = files(java8Jar.archivePath, configurations.runtimeJava8)                   \r\n   main = 'com.acme.core.Main'                                                  \r\n}\r\n\r\n\r\n"
+    ],
+    [
+      0.000108,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    ],
+    [
+      4.6e-05,
+      "\u001b]2;cchampeau@cedric-XPS-15: ~/tmp/demo\u0007\u001b]1;~/tmp/demo\u0007"
+    ],
+    [
+      0.035696,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[44m\u001b[30m ~/tmp/demo \u001b[43m\u001b[34m\u001b[30m  step3 \u001b[49m\u001b[33m\u001b[39m \u001b[K\u001b[?1h\u001b="
+    ],
+    [
+      2.1e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      5.010002,
+      "g"
+    ],
+    [
+      0.137065,
+      "\bgl"
+    ],
+    [
+      0.2108,
+      " "
+    ],
+    [
+      0.216595,
+      "r"
+    ],
+    [
+      0.109281,
+      "u"
+    ],
+    [
+      0.064055,
+      "n"
+    ],
+    [
+      0.5322,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      2.6e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000418,
+      "\u001b]2;/home/cchampeau/DEV/gradle-source-build/bin/gradle run\u0007\u001b]1;gl\u0007"
+    ],
+    [
+      0.239034,
+      "\u001b[0m"
+    ],
+    [
+      0.385428,
+      "\u001b[1m> Connecting to Daemon\u001b[22m"
+    ],
+    [
+      0.10758,
+      "\u001b[22D:buildSrc:compileJava \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:compileGroovy \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      6.8e-05,
+      ":buildSrc:processResources \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:classes \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:jar \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      1.7e-05,
+      ":buildSrc:assemble \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      1.3e-05,
+      ":buildSrc:compileTestJava \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      2e-05,
+      ":buildSrc:compileTestGroovy \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      5.9e-05,
+      ":buildSrc:processTestResources \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      4.1e-05,
+      ":buildSrc:testClasses \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      1.3e-05,
+      ":buildSrc:test \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      4.7e-05,
+      ":buildSrc:check \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:build \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      4.2e-05,
+      "\u001b[1m> Configuring > 0/3 projects > root project\u001b[22m"
+    ],
+    [
+      0.101134,
+      "\u001b[43D\u001b[1m> Building 0% > :utils:compileJavaJava8\u001b[22m\u001b[0K"
+    ],
+    [
+      0.392008,
+      "\u001b[39D:utils:compileJavaJava8\u001b[0K\r\n\u001b[1m> Building 0%\u001b[22m\u001b[0K"
+    ],
+    [
+      0.085311,
+      "\u001b[13D:utils:compileJavaJava8ApiJar\r\n\u001b[1m> Building 33% > :core:compileJavaJava8\u001b[22m"
+    ],
+    [
+      0.401192,
+      "\u001b[39D:core:compileJavaJava8\u001b[0K\r\n\u001b[1m> Building 33%\u001b[22m\u001b[0K"
+    ],
+    [
+      0.085749,
+      "\u001b[14D:core:java8Jar\r\n:utils:java8Jar\r\n:core:run\r\nHello, JavaOne\r\n\r\nBUILD SUCCESSFUL\r\n\r\nTotal time: 1.75 secs\r\n\r\n"
+    ],
+    [
+      3.1e-05,
+      "Publishing build information...\r\n\u001b[0K"
+    ],
+    [
+      0.753194,
+      "\u001b[32mhttps://gradle.com/s/huaukuvkkxer6\u001b[39m\r\n"
+    ],
+    [
+      0.085384,
+      "\r\n"
+    ],
+    [
+      0.171948,
+      "\u001b[0m"
+    ],
+    [
+      0.321406,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    ],
+    [
+      7.4e-05,
+      "\u001b]2;cchampeau@cedric-XPS-15: ~/tmp/demo\u0007\u001b]1;~/tmp/demo\u0007"
+    ],
+    [
+      0.033929,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[44m\u001b[30m ~/tmp/demo \u001b[43m\u001b[34m\u001b[30m  step3 \u001b[49m\u001b[33m\u001b[39m \u001b[K"
+    ],
+    [
+      2e-05,
+      "\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      1.825822,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ],
+  "width": 80,
+  "command": null,
+  "title": null,
+  "version": 1,
+  "duration": 21.604803
+}

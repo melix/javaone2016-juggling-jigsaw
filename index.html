@@ -1,2 +1,224 @@
-initial
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="author" content="Cédric Champeau (@CedricChampeau), Gradle Inc." /><title>Juggling Multiple Java Platforms and Jigsaw with Gradle</title><meta content="yes" name="apple-mobile-web-app-capable" /><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" name="viewport" /><link href="reveal.js/css/reveal.css" rel="stylesheet" /><link rel="stylesheet" href="reveal.js/css/theme/summit.css" id="theme" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" /><link href="reveal.js/lib/css/zenburn.css" rel="stylesheet" /><script>document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script><link rel="stylesheet" type="text/css" href="reveal.js/css/theme/asciinema-player.css" />
+<link rel="stylesheet" type="text/css" href="reveal.js/css/theme/github-gist.css" />
+<script src="reveal.js/css/theme/asciinema-player.js"></script></head><body><div class="reveal"><div class="slides"><section class="title"><div id="front-top">JavaOne 2016</div><div id="front-title">Juggling Multiple Java Platforms and Jigsaw with Gradle <br> Cédric Champeau</div><div id="front-date">2016</div></section><section id="ho-am-i" data-background-image="./images/nantes.jpg" data-background-size="cover"><h2>Who am I</h2>
+<style>
+.asciinema-terminal.font-medium {
+  font-size: 16px;
+}
+</style>
 
+<div class="pictureWrapper">
+   <div class="picture"><img src="images/mini-me.png"></div>
+</div>
+<div class="listingblock"><div class="content"><pre class="highlight"><code class="groovy language-groovy">speaker {
+    name 'Cédric Champeau'
+    company 'Gradle Inc'
+    oss 'Apache Groovy committer',
+    successes 'Static type checker',
+                    'Static compilation',
+                    'Traits',
+                    'Markup template engine',
+                    'DSLs'
+        failures Stream.of(bugs),
+        twitter '@CedricChampeau',
+        github 'melix',
+        extraDescription '''Groovy in Action 2 co-author
+Misc OSS contribs (Gradle plugins, deck2pdf, jlangdetect, ...)'''
+}</code></pre></div></div></section>
+<section id="roovy-in-action-2"><h2>Groovy in Action 2</h2><div class="paragraph"><p><span class="image"><img src="./images/koenig2.png" alt="koenig2" /></span></p></div>
+<div class="paragraph"><p><a href="https://www.manning.com/books/groovy-in-action-second-edition" class="bare">https://www.manning.com/books/groovy-in-action-second-edition</a></p></div>
+<div class="paragraph"><p>Coupon: groovyjo16 (42% off until Thursday)</p></div></section>
+<section><section id="hat-is-gradle"><h2>What is Gradle?</h2><div class="imageblock" style=""><img src="./images/Mechaphant-Gradle.png" alt="Mechaphant Gradle" /></div></section><section id="merge-from-build-hell"><h2>Emerge from Build Hell</h2><div class="ulist"><ul><li><p>Unified, fast, reproducible builds</p></li><li><p>Cross-platform</p></li><li><p>Language agnostic</p></li><li><p>A Build Tool + Cloud Services</p></li></ul></div></section></section>
+<section><section id="roject-jigsaw" data-background-image="./images/puzzle.jpg" data-background-size="cover"><h2>Project Jigsaw</h2></section><section id="roject-jigsaw-2"><h2>Project Jigsaw</h2><div class="ulist"><ul><li><p>Modularity for the Java platform</p><div class="ulist"><ul><li><p><strong>Reliable configuration</strong> (goodbye <em>classpath</em>)</p></li><li><p><strong>Strong encapsulation</strong> (goodbye <em>com.sun</em>)</p></li></ul></div></li><li><p>Enforce strict boundaries between modules</p><div class="ulist"><ul><li><p>compile-time</p></li><li><p>run-time</p></li></ul></div></li></ul></div></section></section>
+<section><section id="igsaw-modules"><h2>Jigsaw modules</h2></section><section id="eclaring-a-module"><h2>Declaring a module</h2><div class="listingblock"><div class="title">module-info.java</div><div class="content"><pre class="highlight"><code class="java language-java">module com.foo.bar {
+    requires org.baz.qux;
+    exports com.foo.bar.alpha;
+    exports com.foo.bar.beta;
+}</code></pre></div></div></section><section id="-module"><h2>A module</h2><div class="ulist"><ul><li><p>Declares dependencies onto other modules</p><div class="ulist"><ul><li><p>optionally transitive (<code>public</code>)</p></li></ul></div></li><li><p>Declares a list of packages it exports</p></li><li><p>will be found on <em>modulepath</em></p></li></ul></div></section></section>
+<section id="hy-it-s-going-to-break-your-apps"><h2>Why it&#8217;s going to break your apps</h2><div class="ulist"><ul><li><p>Exports are package based</p></li><li><p>A non-exported package is not visible to consumers</p></li><li><p>2 modules cannot export the same packages</p></li><li><p>2 modules cannot have the same internal packages</p></li></ul></div>
+<div class="paragraph"><p>Death to <strong>split packages</strong>.</p></div></section>
+<section id="ow-gradle-will-help"><h2>How Gradle will help?</h2><div class="ulist"><ul><li><p>Find a <em>smooth migration path</em></p></li><li><p>Prepare today, migrate when ready</p></li></ul></div></section>
+<section id="isclaimer" data-background-image="./images/dangerous-road.jpg" data-background-size="cover"><h2>Disclaimer</h2>
+<div style="color:yellow">
+<div class="ulist"><ul><li><p>Work in progress</p></li><li><p>Will be backported to current model</p></li><li><p>Requires Gradle 3.0+</p></li><li><p>Works with JDK 9 b119</p></li><li><p>Breaks with JDK 9 b136</p></li></ul></div>
+</div></section>
+<section id="-simple-project"><h2>A simple project</h2><div class="paragraph"><p>
+<div id="player-container-0c16dbec-73a8-4cff-863b-4a8c6b05a99b"></div>
+  <script>
+    asciinema_player.core.CreatePlayer('player-container-0c16dbec-73a8-4cff-863b-4a8c6b05a99b', 'step1.json', { width: 114, height: 24, fontSize: 'medium' });
+  </script>
+</p></div></section>
+<section id="nternal-apis"><h2>Internal APIs</h2><div class="paragraph"><p>
+<div id="player-container-fe3ebb7e-3d0d-44d6-a2f5-787c19a4d5ee"></div>
+  <script>
+    asciinema_player.core.CreatePlayer('player-container-fe3ebb7e-3d0d-44d6-a2f5-787c19a4d5ee', 'step2.json', { width: 114, height: 24, fontSize: 'medium' });
+  </script>
+</p></div></section>
+<section><section id="nternal-apis-maintenance-nightmare"><h2>Internal APIs maintenance nightmare</h2></section><section id="he-jigsaw-plugin"><h2>The "Jigsaw" plugin</h2><div class="ulist"><ul><li><p><em>WIP</em></p></li><li><p>creates <em>additional</em> configurations for each platform</p></li><li><p>adds support for API</p></li><li><p>APIs enforced on JDK &lt; 9 too</p></li></ul></div></section><section id="emo"><h2>Demo</h2><div class="paragraph"><p>
+<div id="player-container-2d644a24-b498-4458-9c0a-682c996131f5"></div>
+  <script>
+    asciinema_player.core.CreatePlayer('player-container-2d644a24-b498-4458-9c0a-682c996131f5', 'step3.json', { width: 114, height: 24, fontSize: 'medium' });
+  </script>
+</p></div></section></section>
+<section><section id="eclaring-internal-apis"><h2>Declaring internal APIs</h2></section><section id="ow-to-declare"><h2>How to declare</h2><div class="paragraph"><p>
+<div id="player-container-a51d2957-0ecf-4157-ac6f-532426ecadcc"></div>
+  <script>
+    asciinema_player.core.CreatePlayer('player-container-a51d2957-0ecf-4157-ac6f-532426ecadcc', 'step4.json', { width: 114, height: 24, fontSize: 'medium' });
+  </script>
+</p></div></section><section id="ompilation-fails"><h2>Compilation fails!</h2><div class="paragraph"><p><a href="https://gradle.com/s/xwktle5a6xfgw" class="bare">https://gradle.com/s/xwktle5a6xfgw</a></p></div></section></section>
+<section><section id="ompile-avoidance"><h2>Compile avoidance</h2><div class="paragraph"><p>
+<div id="player-container-f2a5d1a2-05bd-456d-893d-900fcd579d3a"></div>
+  <script>
+    asciinema_player.core.CreatePlayer('player-container-f2a5d1a2-05bd-456d-893d-900fcd579d3a', 'step5.json', { width: 114, height: 24, fontSize: 'medium' });
+  </script>
+</p></div></section><section id="uild-scan"><h2>Build scan</h2><div class="paragraph"><p><a href="https://gradle.com/s/6tlwxiqmjxi4a" class="bare">https://gradle.com/s/6tlwxiqmjxi4a</a></p></div></section><section id="ompile-avoidance-benefits"><h2>Compile avoidance benefits</h2><div class="ulist"><ul><li><p>Doesn&#8217;t recompile dependents if:</p><div class="ulist"><ul><li><p>method body changes</p></li><li><p>parameter names change</p></li><li><p>method order changes</p></li><li><p>private method added/removed</p></li></ul></div></li><li><p>In short: if API stable, do nothing</p></li></ul></div></section></section>
+<section><section id="eclaring-target-platforms"><h2>Declaring target platforms</h2><div class="paragraph"><p>
+<div id="player-container-d9919372-b772-48e0-8014-3d61e0741ce6"></div>
+  <script>
+    asciinema_player.core.CreatePlayer('player-container-d9919372-b772-48e0-8014-3d61e0741ce6', 'step6.json', { width: 114, height: 24, fontSize: 'medium' });
+  </script>
+</p></div></section><section id="uild-scans"><h2>Build scans</h2><div class="ulist"><ul><li><p><code>run</code> only compiled the Java 8 variant of <code>utils</code>: <a href="https://gradle.com/s/mm2nlbuefyqje" class="bare">https://gradle.com/s/mm2nlbuefyqje</a></p></li><li><p><code>compileJavaJava7</code> only compiled the Java 7 variant of <code>utils</code>: <a href="https://gradle.com/s/e6d3mnbxs7zkk" class="bare">https://gradle.com/s/e6d3mnbxs7zkk</a></p></li></ul></div></section></section>
+<section id="unning-on-multiple-platforms"><h2>Running on multiple platforms</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="groovy language-groovy">task run {}
+platforms.targetPlatforms.each { platform -&gt;
+    def platformRun = task "${platform}Run"(type: JavaExec) {
+        dependsOn "${platform}Jar"
+        classpath = files(tasks."${platform}Jar".archivePath,
+                          configurations."runtime${platform.capitalize()}")
+        executable = "${platforms.jdkFor(platform)}/bin/java"
+        main = 'com.acme.core.Main'
+    }
+    run.dependsOn(platformRun)
+}</code></pre></div></div></section>
+<section id="hy-does-gradle-help"><h2>Why does Gradle help?</h2><div class="ulist"><ul><li><p>Add <code>targetPlatform 'java9'</code></p></li><li><p>Generate module descriptor automatically?</p></li><li><p>Profit!</p></li></ul></div></section>
+<section id="rying-it-out"><h2>Trying it out</h2><div class="paragraph"><p>
+<div id="player-container-041e299a-45d0-4dd2-884f-568f0e4c4fcc"></div>
+  <script>
+    asciinema_player.core.CreatePlayer('player-container-041e299a-45d0-4dd2-884f-568f0e4c4fcc', 'step7.json', { width: 114, height: 24, fontSize: 'medium' });
+  </script>
+</p></div></section>
+<section id="utomatically-generating-code-module-info-java-code"><h2>Automatically generating <code>module-info.java</code>?</h2><div class="paragraph"><p>
+<div id="player-container-6a7c5dc1-3b33-4ba8-a075-3ecd27856f26"></div>
+  <script>
+    asciinema_player.core.CreatePlayer('player-container-6a7c5dc1-3b33-4ba8-a075-3ecd27856f26', 'step8.json', { width: 114, height: 24, fontSize: 'medium' });
+  </script>
+</p></div></section>
+<section><section id="ulti-release-jars"><h2>Multi-release jars</h2><div class="ulist"><ul><li><p><strong>Good idea</strong>: provide different versions of classes depending on runtime</p></li><li><p><strong>Bad idea</strong>: in general, dependencies will be different so should be different artifacts</p></li><li><p>But let&#8217;s give it a try&#8230;&#8203;</p></li></ul></div></section><section id="reating-a-mrjar"><h2>Creating a MRJAR</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="groovy language-groovy">task multireleaseJar(type:Jar) {
+    dependsOn compileJavaJava7, compileJavaJava9
+    baseName = "${project.name}-multi"
+    from compileJavaJava7.destinationDir
+    into('META-INF/versions/9') {
+       from compileJavaJava9.destinationDir
+    }
+    manifest.attributes('Multi-Release': 'true')
+}</code></pre></div></div></section><section id="ixing-the-code-run-code-configurations"><h2>Fixing the <code>run</code> configurations</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="groovy language-groovy">platforms.targetPlatforms.each { platform -&gt;
+    def platformRun = task "${platform}Run"(type: JavaExec) {
+        dependsOn multireleaseJar
+        classpath = files(multireleaseJar.archivePath,
+                          configurations."runtime${platform.capitalize()}")
+        executable = "${platforms.jdkFor(platform)}/bin/java"
+        main = 'com.acme.core.Main'
+    }
+    run.dependsOn(platformRun)
+}</code></pre></div></div></section><section id="reate-version-specific-classes"><h2>Create version specific classes</h2><div class="paragraph"><p>
+<div id="player-container-48a48b13-5974-41d8-8823-e977015d60bd"></div>
+  <script>
+    asciinema_player.core.CreatePlayer('player-container-48a48b13-5974-41d8-8823-e977015d60bd', 'step9.json', { width: 114, height: 24, fontSize: 'medium' });
+  </script>
+</p></div></section></section>
+<section id="hat-s-next"><h2>What&#8217;s next?</h2><div class="ulist"><ul><li><p>Making this a first class citizen in Gradle</p></li><li><p>Automatic toolchain selection</p></li><li><p>Toolchain provisioning</p></li><li><p>Support for <code>modulepath</code></p></li><li><p>Support for <code>jimage</code> and <code>jlink</code></p></li></ul></div></section>
+<section id="e-involved"><h2>Be involved</h2><div class="ulist"><ul><li><p>Specs can be found on <a href="https://github.com/gradle/gradle/blob/master/design-docs/jdk9-support.md">our GitHub repo</a></p></li></ul></div></section>
+<section id="uestions" data-background-image="./images/questions.jpg" data-background-size="cover"></section>
+<section><section id="ree-webinars"><h2>Free webinars</h2></section><section id="xplore-the-latest-features-in-gradle-cloud-services"><h2>EXPLORE THE LATEST FEATURES IN GRADLE CLOUD SERVICES</h2><div class="paragraph"><p>September 28th, 2016 - 11am PDT / 2 pm EDT</p></div>
+<div class="paragraph"><p>By Mark Vieira (Principal Engineer at Gradle Inc)</p></div>
+<div class="paragraph"><p>RSVP: <a href="https://goo.gl/yFsgLD" class="bare">https://goo.gl/yFsgLD</a></p></div>
+<div class="paragraph"><p>Learn how to use Gradle Cloud Services to substantially improve the process of troubleshooting build/test failures, performance tuning of your builds, and analyzing your dependencies and plugins.</p></div>
+<div class="paragraph"><p>The latest release of Gradle Cloud Services will be available end of September. We would like to invite you to a 20 minutes webinar featuring what is new on Wednesday, September 28.</p></div></section><section id="ree-live-training-introduction-to-gradle"><h2>FREE LIVE TRAINING: INTRODUCTION TO GRADLE</h2><div class="paragraph"><p>Wed - Thurs October 26 - 27 8:30am - 12:30pm PDT</p></div>
+<div class="paragraph"><p>By Gary Hale (Principal Engineer at Gradle Inc)</p></div>
+<div class="paragraph"><p>RSVP: <a href="https://goo.gl/L6mKg4" class="bare">https://goo.gl/L6mKg4</a></p></div>
+<div class="paragraph"><p>Get hands-on training taught live by a Gradle core developer on the fundamentals features of Gradle in 8 hours.</p></div>
+<div class="paragraph"><p>We are very excited to announce a one-time offer to attend Gradle Inc’s Introduction to Gradle Training for FREE! For the last few years we have been charging $700-$900 per seat for our live, virtual Introduction to Gradle training. Don’t miss this chance to get a free seat to one our most popular training classes.</p></div></section></section>
+<section id="e-re-hiring"><h2>We&#8217;re hiring!</h2><div class="paragraph"><p><a href="http://gradle.org/gradle-jobs/" class="bare">http://gradle.org/gradle-jobs/</a></p></div>
+<div class="imageblock" style=""><img src="./images/GradleLogoLarge.png" alt="GradleLogoLarge" /></div></section>
+<section id="hank-you"><h2>Thank you!</h2><div class="ulist"><ul><li><p>Slides and code : <a href="https://github.com/melix/javaone2016-juggling-jigsaw" class="bare">https://github.com/melix/javaone2016-juggling-jigsaw</a></p></li><li><p>Gradle documentation : <a href="http://gradle.org/documentation/" class="bare">http://gradle.org/documentation/</a></p></li><li><p>State of the module system: <a href="http://openjdk.java.net/projects/jigsaw/spec/sotms" class="bare">http://openjdk.java.net/projects/jigsaw/spec/sotms</a></p></li><li><p>Follow me: <a href="http://twitter.com/CedricChampeau">@CedricChampeau</a></p></li></ul></div></section></div></div><script src="reveal.js/lib/js/head.min.js"></script><script src="reveal.js/js/reveal.js"></script><script>// See https://github.com/hakimel/reveal.js#configuration for a full list of configuration options
+Reveal.initialize({
+  // Display controls in the bottom right corner
+  controls: true,
+  // Display a presentation progress bar
+  progress: true,
+  // Display the page number of the current slide
+  slideNumber: true,
+  // Push each slide change to the browser history
+  history: true,
+  // Enable keyboard shortcuts for navigation
+  keyboard: true,
+  // Enable the slide overview mode
+  overview: true,
+  // Vertical centering of slides
+  center: true,
+  // Enables touch navigation on devices with touch input
+  touch: true,
+  // Loop the presentation
+  loop: false,
+  // Change the presentation direction to be RTL
+  rtl: false,
+  // Turns fragments on and off globally
+  fragments: true,
+  // Flags if the presentation is running in an embedded mode,
+  // i.e. contained within a limited portion of the screen
+  embedded: false,
+  // Number of milliseconds between automatically proceeding to the
+  // next slide, disabled when set to 0, this value can be overwritten
+  // by using a data-autoslide attribute on your slides
+  autoSlide: 0,
+  // Stop auto-sliding after user input
+  autoSlideStoppable: true,
+  // Enable slide navigation via mouse wheel
+  mouseWheel: false,
+  // Hides the address bar on mobile devices
+  hideAddressBar: true,
+  // Opens links in an iframe preview overlay
+  previewLinks: false,
+  // Theme (e.g., beige, black, league, night, serif, simple, sky, solarized, white)
+  // NOTE setting the theme in the config no longer works in reveal.js 3.x
+  //theme: Reveal.getQueryHash().theme || 'summit',
+  // Transition style (e.g., none, fade, slide, convex, concave, zoom)
+  transition: Reveal.getQueryHash().transition || 'linear',
+  // Transition speed (e.g., default, fast, slow)
+  transitionSpeed: 'default',
+  // Transition style for full page slide backgrounds (e.g., none, fade, slide, convex, concave, zoom)
+  backgroundTransition: 'fade',
+  // Number of slides away from the current that are visible
+  viewDistance: 3,
+  // Parallax background image (e.g., "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'")
+  parallaxBackgroundImage: '',
+  // Parallax background size in CSS syntax (e.g., "2100px 900px")
+  parallaxBackgroundSize: '',
+
+  // The "normal" size of the presentation, aspect ratio will be preserved
+  // when the presentation is scaled to fit different resolutions. Can be
+  // specified using percentage units.
+  width: 960,
+  height: 700,
+
+  // Factor of the display size that should remain empty around the content
+  margin: 0.1,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 1.5,
+
+  // Optional libraries used to extend on reveal.js
+  dependencies: [
+      { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+  ]
+});</script><div id="footer">
+  <div style="width:100%">
+     <div style="display:inline">Juggling Multiple Java Platforms and Jigsaw with Gradle - @CedricChampeau</div>
+     <div style="display:inline; position:absolute; right: 50px;"><img src="images/gradle-logo-min.png"></div>
+  </div>
+</div></body></html>

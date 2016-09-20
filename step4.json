@@ -1,0 +1,522 @@
+{
+  "height": 24,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "stdout": [
+    [
+      0.18855,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    ],
+    [
+      2.1e-05,
+      "\u001b]2;cchampeau@cedric-XPS-15: ~/tmp/demo\u0007\u001b]1;~/tmp/demo\u0007"
+    ],
+    [
+      0.033679,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[44m\u001b[30m ~/tmp/demo \u001b[43m\u001b[34m\u001b[30m  step4 \u001b[49m\u001b[33m\u001b[39m \u001b[K"
+    ],
+    [
+      0.000113,
+      "\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      1.728427,
+      "n"
+    ],
+    [
+      0.111987,
+      "\bna"
+    ],
+    [
+      0.100104,
+      "n"
+    ],
+    [
+      0.183146,
+      "o"
+    ],
+    [
+      0.120303,
+      " "
+    ],
+    [
+      0.258469,
+      "u"
+    ],
+    [
+      0.173757,
+      "t"
+    ],
+    [
+      0.368701,
+      "ils\u001b[1m/\u001b[0m"
+    ],
+    [
+      1.228366,
+      "\b\u001b[0m/b"
+    ],
+    [
+      0.153016,
+      "u"
+    ],
+    [
+      0.065396,
+      "i"
+    ],
+    [
+      0.199525,
+      "l"
+    ],
+    [
+      0.081543,
+      "d"
+    ],
+    [
+      0.248902,
+      "\u0007"
+    ],
+    [
+      4e-05,
+      "\r\r\n"
+    ],
+    [
+      1.2e-05,
+      "\u001b[J\u001b[1;31mbuild\u001b[0m/        \u001b[Jbuild.gradle\u001b[J\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[0m\u001b[27m\u001b[24m\u001b[39m\u001b[49m\r\u001b[24Cnano utils/build\u001b[K\u001b[0m\u001b[27m\u001b[24m\u001b[39m\u001b[49m"
+    ],
+    [
+      0.556772,
+      "."
+    ],
+    [
+      0.160067,
+      "gradle\u001b[1m \u001b[0m"
+    ],
+    [
+      0.397097,
+      "\b\u001b[0m \b\u001b[?1l\u001b>"
+    ],
+    [
+      2.4e-05,
+      "\u001b[?2004l\r\r\n\u001b[J"
+    ],
+    [
+      0.000606,
+      "\u001b]2;nano utils/build.gradle\u0007\u001b]1;nano\u0007"
+    ],
+    [
+      0.013997,
+      "\u001b[?1049h\u001b[1;24r\u001b(B\u001b[m\u001b[4l\u001b[?7h\u001b[?1h\u001b="
+    ],
+    [
+      2.5e-05,
+      "\u001b[?1h\u001b=\u001b[?1h\u001b="
+    ],
+    [
+      0.000524,
+      "\u001b[39;49m\u001b[?25l"
+    ],
+    [
+      7e-05,
+      "\u001b[39;49m\u001b(B\u001b[m\u001b[H\u001b[2J\u001b[22;33H\u001b(B\u001b[0;7m[ Reading File ]\r\u001b[3d\u001b(B\u001b[m"
+    ],
+    [
+      7.1e-05,
+      "\u001b[22;39H\u001b(B\u001b[0;7m 9 lines\r\u001b[12d\u001b(B\u001b[m"
+    ],
+    [
+      0.000736,
+      "\u001b[?12l\u001b[?25h"
+    ],
+    [
+      8.3e-05,
+      "\u001b[H\u001b[39;49m\u001b(B\u001b[0;7m  GNU nano 2.5.3           File: utils/build.gradle                             \u001b[3;1H\u001b(B\u001b[mrepositories {\u001b[4;4Hjcenter()\r\u001b[5d}\u001b[7d\bdependencies {\u001b[8;4Hcompile 'org.apache.commons:commons-lang3:3.4'\r\u001b[9d}\u001b[23d\b\u001b(B\u001b[0;7m^G\u001b(B\u001b[m Get Help  \u001b(B\u001b[0;7m^O\u001b(B\u001b[m Write Out \u001b(B\u001b[0;7m^W\u001b(B\u001b[m Where Is  \u001b(B\u001b[0;7m^K\u001b(B\u001b[m Cut Text  \u001b(B\u001b[0;7m^J\u001b(B\u001b[m Justify   \u001b(B\u001b[0;7m^C\u001b(B\u001b[m Cur Pos\r\u001b[24d\u001b(B\u001b[0;7m^X\u001b(B\u001b[m Exit\u001b[14G\u001b(B\u001b[0;7m^R\u001b(B\u001b[m Read File \u001b(B\u001b[0;7m^\\\u001b(B\u001b[m Replace   \u001b(B\u001b[0;7m^U\u001b(B\u001b[m Uncut Text\u001b(B\u001b[0;7m^T\u001b(B\u001b[m To Spell  \u001b(B\u001b[0;7m^_\u001b(B\u001b[m Go To Line\r\u001b[3d"
+    ],
+    [
+      1.071332,
+      "\u001b[4d"
+    ],
+    [
+      0.499922,
+      "\u001b[5d"
+    ],
+    [
+      0.029835,
+      "\u001b[6d"
+    ],
+    [
+      0.03043,
+      "\u001b[7d"
+    ],
+    [
+      0.030638,
+      "\u001b[8d"
+    ],
+    [
+      0.030437,
+      "\u001b[9d"
+    ],
+    [
+      0.030015,
+      "\u001b[10d"
+    ],
+    [
+      0.031119,
+      "\u001b[11d"
+    ],
+    [
+      0.030262,
+      "\u001b[12d"
+    ],
+    [
+      0.769467,
+      "\u001b[1;71H\u001b(B\u001b[0;7mModified\r\u001b[11d\u001b(B\u001b[m"
+    ],
+    [
+      0.442497,
+      "a"
+    ],
+    [
+      0.22125,
+      "p"
+    ],
+    [
+      0.081527,
+      "i"
+    ],
+    [
+      0.228778,
+      " "
+    ],
+    [
+      0.215175,
+      "{"
+    ],
+    [
+      0.302734,
+      "\r\u001b[12d"
+    ],
+    [
+      0.442743,
+      " "
+    ],
+    [
+      0.159075,
+      " "
+    ],
+    [
+      0.163867,
+      " "
+    ],
+    [
+      0.134185,
+      "e"
+    ],
+    [
+      0.209048,
+      "x"
+    ],
+    [
+      0.125013,
+      "p"
+    ],
+    [
+      0.06904,
+      "o"
+    ],
+    [
+      0.049919,
+      "r"
+    ],
+    [
+      0.163914,
+      "t\r\u001b[22d\u001b[K\u001b[12;10H"
+    ],
+    [
+      0.284015,
+      " "
+    ],
+    [
+      0.521955,
+      "\b"
+    ],
+    [
+      0.087666,
+      "s"
+    ],
+    [
+      0.123502,
+      " "
+    ],
+    [
+      0.172434,
+      "'"
+    ],
+    [
+      0.235492,
+      "c"
+    ],
+    [
+      0.12003,
+      "o"
+    ],
+    [
+      0.215681,
+      "m"
+    ],
+    [
+      0.288422,
+      "."
+    ],
+    [
+      0.179154,
+      "a"
+    ],
+    [
+      0.139939,
+      "c"
+    ],
+    [
+      0.69842,
+      "m"
+    ],
+    [
+      0.091363,
+      "e"
+    ],
+    [
+      0.17402,
+      "."
+    ],
+    [
+      0.358168,
+      "u"
+    ],
+    [
+      0.102026,
+      "t"
+    ],
+    [
+      0.111527,
+      "i"
+    ],
+    [
+      0.083241,
+      "l"
+    ],
+    [
+      0.091161,
+      "s"
+    ],
+    [
+      0.201432,
+      "'"
+    ],
+    [
+      0.350907,
+      "\r\u001b[13d"
+    ],
+    [
+      0.830118,
+      "}"
+    ],
+    [
+      0.798955,
+      "\u001b[14d\b"
+    ],
+    [
+      0.457441,
+      "\u001b[22d\u001b(B\u001b[0;7mSave modified buffer (ANSWERING \"No\" WILL DESTROY CHANGES) ?                    \u001b[23;1H Y\u001b(B\u001b[m Yes\u001b[K\r\u001b[24d\u001b(B\u001b[0;7m N\u001b(B\u001b[m No  \u001b[14G   \u001b(B\u001b[0;7m^C\u001b(B\u001b[m Cancel\u001b[K\u001b[22;62H"
+    ],
+    [
+      0.277886,
+      "\r\u001b(B\u001b[0;7mFile Name to Write: utils/build.gradle                      \r\u001b[23d^G\u001b(B\u001b[m Get Help     \u001b(B\u001b[0;7mM-D\u001b(B\u001b[m DOS Format  \u001b(B\u001b[0;7mM-A\u001b(B\u001b[m Append\u001b[49G\u001b(B\u001b[0;7mM-B\u001b(B\u001b[m Backup File\r\u001b[24d\u001b(B\u001b[0;7m^C\u001b(B\u001b[m Cancel\u001b[17G\u001b(B\u001b[0;7mM-M\u001b(B\u001b[m Mac Format  \u001b(B\u001b[0;7mM-P\u001b(B\u001b[m Prepend     \u001b(B\u001b[0;7m^T\u001b(B\u001b[m To Files\u001b[22;39H"
+    ],
+    [
+      0.809371,
+      "\u001b[?25l"
+    ],
+    [
+      2.7e-05,
+      "\u001b[22;31H\u001b[39;49m\u001b(B\u001b[m\u001b[1K \u001b(B\u001b[0;7m[ Wrote 12 lines ]\u001b(B\u001b[m\u001b[K\r\u001b[14d"
+    ],
+    [
+      8.5e-05,
+      "\u001b[22d\u001b[J\u001b[1;71H\u001b(B\u001b[0;7m        \u001b[24;80H\u001b(B\u001b[m\u001b[24;1H\u001b[?12l\u001b[?25h\u001b[?1049l\r\u001b[?1l\u001b>"
+    ],
+    [
+      0.000482,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    ],
+    [
+      0.00014,
+      "\u001b]2;cchampeau@cedric-XPS-15: ~/tmp/demo\u0007"
+    ],
+    [
+      1.2e-05,
+      "\u001b]1;~/tmp/demo\u0007"
+    ],
+    [
+      0.033532,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[44m\u001b[30m ~/tmp/demo \u001b[43m\u001b[34m\u001b[30m  step4 ● \u001b[49m\u001b[33m\u001b[39m \u001b[K"
+    ],
+    [
+      4e-05,
+      "\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      1.45349,
+      "g"
+    ],
+    [
+      0.149754,
+      "\bgl"
+    ],
+    [
+      0.126915,
+      " "
+    ],
+    [
+      0.268094,
+      "r"
+    ],
+    [
+      0.119918,
+      "u"
+    ],
+    [
+      0.059982,
+      "n"
+    ],
+    [
+      0.998769,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      2.5e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000457,
+      "\u001b]2;/home/cchampeau/DEV/gradle-source-build/bin/gradle run\u0007\u001b]1;gl\u0007"
+    ],
+    [
+      0.228898,
+      "\u001b[0m"
+    ],
+    [
+      0.36307,
+      "\u001b[1m> Connecting to Daemon\u001b[22m"
+    ],
+    [
+      0.106747,
+      "\u001b[22D:buildSrc:compileJava \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:compileGroovy \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      1.8e-05,
+      ":buildSrc:processResources \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      6.1e-05,
+      ":buildSrc:classes \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:jar \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:assemble \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      1.1e-05,
+      ":buildSrc:compileTestJava \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      2.4e-05,
+      ":buildSrc:compileTestGroovy \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      4e-05,
+      ":buildSrc:processTestResources \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      2.1e-05,
+      ":buildSrc:testClasses \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      4.5e-05,
+      ":buildSrc:test \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      4e-05,
+      ":buildSrc:check \u001b[33mUP-TO-DATE\u001b[39m\r\n\u001b[1m> Loading > buildSrc > :buildSrc:build\u001b[22m"
+    ],
+    [
+      0.086046,
+      "\u001b[38D:buildSrc:build \u001b[33mUP-TO-DATE\u001b[39m\u001b[0K\r\n"
+    ],
+    [
+      6.3e-05,
+      ":utils:compileJavaJava8 \u001b[33mUP-TO-DATE\u001b[39m\r\n\u001b[1m> Building 16% > :utils:compileJavaJava8ApiJar\u001b[22m"
+    ],
+    [
+      0.085481,
+      "\u001b[46D:utils:compileJavaJava8ApiJar\u001b[0K\r\n\u001b[1m> Building 33% > :core:compileJavaJava8\u001b[22m\u001b[0K"
+    ],
+    [
+      0.297701,
+      "\u001b[39D:core:compileJavaJava8\u001b[0K\r\n/home/cchampeau/tmp/demo/core/src/main/java/com/acme/core/Main.java:3: error: package com.acme.utils.internal does not exist\r\n\u001b[1m> Building 33% > :core:compileJavaJava8\u001b[22m"
+    ],
+    [
+      0.085793,
+      "\u001b[39Dimport com.acme.utils.internal.DarkUtils;\r\n                              ^\r\n/home/cchampeau/tmp/demo/core/src/main/java/com/acme/core/Main.java:8: error: cannot find symbol\r\n            + DarkUtils.pretty(\"javaOne\"));         \r\n              ^\r\n  symbol:   variable DarkUtils\r\n  location: class Main\r\n2 errors\r\n:core:compileJavaJava8 \u001b[33mFAILED\u001b[39m\r\n\r\n\u001b[31mFAILURE: \u001b[39m\u001b[31mBuild failed with an exception.\u001b[39m\r\n\r\n* What went wrong:\r\n"
+    ],
+    [
+      2.2e-05,
+      "Execution failed for task ':core:compileJavaJava8'.\r\n\u001b[33m> \u001b[39mCompilation failed with exit code 1; see the compiler error output for details.\r\n\r\n* Try:\r\n"
+    ],
+    [
+      1e-05,
+      "Run with \u001b[1m--stacktrace\u001b[22m option to get the stack trace. Run with \u001b[1m--info\u001b[22m or \u001b[1m--debug\u001b[22m option to get more log output.\r\n\r\n\u001b[31mBUILD FAILED\u001b[39m\r\n\r\n"
+    ],
+    [
+      9e-06,
+      "Total time: 1.187 secs\r\n\r\n"
+    ],
+    [
+      8e-06,
+      "Publishing build information...\r\n\u001b[0K"
+    ],
+    [
+      0.443603,
+      "\u001b[32mhttps://gradle.com/s/xwktle5a6xfgw\u001b[39m\r\n"
+    ],
+    [
+      0.085219,
+      "\r\n"
+    ],
+    [
+      0.094666,
+      "\u001b[0m"
+    ],
+    [
+      0.318581,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    ],
+    [
+      1.8e-05,
+      "\u001b]2;cchampeau@cedric-XPS-15: ~/tmp/demo\u0007\u001b]1;~/tmp/demo\u0007"
+    ],
+    [
+      0.03383,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[40m\u001b[39m \u001b[31m✘ \u001b[44m\u001b[30m\u001b[30m ~/tmp/demo \u001b[43m\u001b[34m\u001b[30m  step4 ● \u001b[49m\u001b[33m\u001b[39m \u001b[K"
+    ],
+    [
+      2e-05,
+      "\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      2.099898,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ],
+  "title": null,
+  "width": 80,
+  "command": null,
+  "version": 1,
+  "duration": 27.292387
+}

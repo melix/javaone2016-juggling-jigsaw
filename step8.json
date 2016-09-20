@@ -1,0 +1,598 @@
+{
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "height": 24,
+  "width": 80,
+  "duration": 61.85416,
+  "version": 1,
+  "command": null,
+  "stdout": [
+    [
+      0.186788,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    ],
+    [
+      5.9e-05,
+      "\u001b]2;cchampeau@cedric-XPS-15: ~/tmp/demo\u0007\u001b]1;~/tmp/demo\u0007"
+    ],
+    [
+      0.029974,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[44m\u001b[30m ~/tmp/demo \u001b[43m\u001b[34m\u001b[30m  step8 \u001b[49m\u001b[33m\u001b[39m \u001b[K"
+    ],
+    [
+      9e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      1.6e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      1.705227,
+      "n"
+    ],
+    [
+      0.107279,
+      "\bna"
+    ],
+    [
+      0.079611,
+      "n"
+    ],
+    [
+      0.189806,
+      "o"
+    ],
+    [
+      0.323261,
+      " "
+    ],
+    [
+      2.247335,
+      "u"
+    ],
+    [
+      0.107439,
+      "t"
+    ],
+    [
+      0.186901,
+      "ils\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.999752,
+      "\b\u001b[0m/b"
+    ],
+    [
+      0.089967,
+      "u"
+    ],
+    [
+      0.047349,
+      "i"
+    ],
+    [
+      0.142876,
+      "ld"
+    ],
+    [
+      0.39461,
+      "."
+    ],
+    [
+      0.17457,
+      "gradle\u001b[1m \u001b[0m"
+    ],
+    [
+      0.373697,
+      "\b\u001b[0m \b"
+    ],
+    [
+      2.5e-05,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      3.8e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000562,
+      "\u001b]2;nano utils/build.gradle\u0007\u001b]1;nano\u0007"
+    ],
+    [
+      0.017081,
+      "\u001b[?1049h\u001b[1;24r\u001b(B\u001b[m\u001b[4l\u001b[?7h\u001b[?1h\u001b=\u001b[?1h\u001b=\u001b[?1h\u001b="
+    ],
+    [
+      0.000686,
+      "\u001b[39;49m\u001b[?25l"
+    ],
+    [
+      8.3e-05,
+      "\u001b[39;49m\u001b(B\u001b[m\u001b[H\u001b[2J\u001b[22;33H\u001b(B\u001b[0;7m[ Reading File ]\r\u001b[3d\u001b(B\u001b[m"
+    ],
+    [
+      9.7e-05,
+      "\u001b[22;32H\u001b(B\u001b[0;7m[ Read 15 lines\r\u001b[18d\u001b(B\u001b[m"
+    ],
+    [
+      0.000768,
+      "\u001b[?12l\u001b[?25h"
+    ],
+    [
+      0.000156,
+      "\u001b[H\u001b[39;49m\u001b(B\u001b[0;7m  GNU nano 2.5.3           File: utils/build.gradle                             \u001b[3;1H\u001b(B\u001b[mrepositories {\u001b[4;4Hjcenter()\r\u001b[5d}\u001b[7d\bdependencies {\u001b[8;4Hcompile 'org.apache.commons:commons-lang3:3.4'\r\u001b[9d}\u001b[11d\bapi {\u001b[12d\b\bexports 'com.acme.utils'\r\u001b[13d}\u001b[15d\bplatforms {\u001b[16;4HtargetPlatforms 'java7', 'java8', 'java9'\r\u001b[17d}\u001b[23d\b\u001b(B\u001b[0;7m^G\u001b(B\u001b[m Get Help  \u001b(B\u001b[0;7m^O\u001b(B\u001b[m Write Out \u001b(B\u001b[0;7m^W\u001b(B\u001b[m Where Is  \u001b(B\u001b[0;7m^K\u001b(B\u001b[m Cut Text  \u001b(B\u001b[0;7m^J\u001b(B\u001b[m Justify   \u001b(B\u001b[0;7m^C\u001b(B\u001b[m Cur Pos\r\u001b[24d\u001b(B\u001b[0;7m^X\u001b(B\u001b[m Exit\u001b[14G\u001b(B\u001b[0;7m^R\u001b(B\u001b[m Read File \u001b(B\u001b[0;7m^\\\u001b(B\u001b[m Replace   \u001b(B\u001b[0;7m^U\u001b(B\u001b[m Uncut Text\u001b(B\u001b[0;7m^T\u001b(B\u001b[m To Spell  \u001b(B\u001b[0;7m^_\u001b(B\u001b[m Go To Line\r\u001b[3d"
+    ],
+    [
+      1.011203,
+      "\u001b[4d"
+    ],
+    [
+      0.499641,
+      "\u001b[5d"
+    ],
+    [
+      0.029736,
+      "\u001b[6d"
+    ],
+    [
+      0.030429,
+      "\u001b[7d"
+    ],
+    [
+      0.030472,
+      "\u001b[8d"
+    ],
+    [
+      0.030466,
+      "\u001b[9d"
+    ],
+    [
+      0.030137,
+      "\u001b[10d"
+    ],
+    [
+      0.210467,
+      "\u001b[11d"
+    ],
+    [
+      0.179041,
+      "\u001b[12d"
+    ],
+    [
+      0.292701,
+      "\u001b[13d"
+    ],
+    [
+      0.347061,
+      "\u001b7\u001b[13;21r\u001b8\u001bM\u001b[1;24r\u001b[1;71H\u001b(B\u001b[0;7mModified\r\u001b[14d\u001b(B\u001b[m"
+    ],
+    [
+      0.379645,
+      "\u001b[A"
+    ],
+    [
+      0.316886,
+      " "
+    ],
+    [
+      0.169334,
+      " "
+    ],
+    [
+      0.162436,
+      " "
+    ],
+    [
+      0.684053,
+      "m"
+    ],
+    [
+      0.169476,
+      "o"
+    ],
+    [
+      0.08973,
+      "d"
+    ],
+    [
+      0.139702,
+      "u"
+    ],
+    [
+      0.188816,
+      "l"
+    ],
+    [
+      0.062997,
+      "e"
+    ],
+    [
+      0.23558,
+      "N"
+    ],
+    [
+      0.119836,
+      "a"
+    ],
+    [
+      0.109783,
+      "m"
+    ],
+    [
+      0.107144,
+      "e"
+    ],
+    [
+      0.145975,
+      "\r\u001b[22d\u001b[K\u001b[13;15H"
+    ],
+    [
+      0.137272,
+      "="
+    ],
+    [
+      0.17525,
+      " "
+    ],
+    [
+      0.230997,
+      "'"
+    ],
+    [
+      2.36978,
+      "c"
+    ],
+    [
+      0.163604,
+      "o"
+    ],
+    [
+      0.175362,
+      "m"
+    ],
+    [
+      0.731389,
+      "."
+    ],
+    [
+      0.156987,
+      "a"
+    ],
+    [
+      0.171478,
+      "c"
+    ],
+    [
+      0.087665,
+      "m"
+    ],
+    [
+      0.166229,
+      "e"
+    ],
+    [
+      0.144451,
+      "."
+    ],
+    [
+      0.306312,
+      "u"
+    ],
+    [
+      0.129878,
+      "t"
+    ],
+    [
+      0.091213,
+      "i"
+    ],
+    [
+      0.077067,
+      "l"
+    ],
+    [
+      0.142926,
+      "s"
+    ],
+    [
+      0.753832,
+      "'"
+    ],
+    [
+      0.375732,
+      "\r\u001b[22d\u001b(B\u001b[0;7mSave modified buffer (ANSWERING \"No\" WILL DESTROY CHANGES) ?                    \u001b[23;1H Y\u001b(B\u001b[m Yes\u001b[K\r\u001b[24d\u001b(B\u001b[0;7m N\u001b(B\u001b[m No  \u001b[14G   \u001b(B\u001b[0;7m^C\u001b(B\u001b[m Cancel\u001b[K\u001b[22;62H"
+    ],
+    [
+      0.672639,
+      "\r\u001b(B\u001b[0;7mFile Name to Write: utils/build.gradle                      \r\u001b[23d^G\u001b(B\u001b[m Get Help     \u001b(B\u001b[0;7mM-D\u001b(B\u001b[m DOS Format  \u001b(B\u001b[0;7mM-A\u001b(B\u001b[m Append\u001b[49G\u001b(B\u001b[0;7mM-B\u001b(B\u001b[m Backup File\r\u001b[24d\u001b(B\u001b[0;7m^C\u001b(B\u001b[m Cancel\u001b[17G\u001b(B\u001b[0;7mM-M\u001b(B\u001b[m Mac Format  \u001b(B\u001b[0;7mM-P\u001b(B\u001b[m Prepend     \u001b(B\u001b[0;7m^T\u001b(B\u001b[m To Files\u001b[22;39H"
+    ],
+    [
+      0.505404,
+      "\u001b[?25l"
+    ],
+    [
+      2.1e-05,
+      "\u001b[22;31H\u001b[39;49m\u001b(B\u001b[m\u001b[1K \u001b(B\u001b[0;7m[ Wrote 16 lines ]\u001b(B\u001b[m\u001b[K\u001b[13;33H"
+    ],
+    [
+      7.9e-05,
+      "\r\u001b[22d\u001b[J\u001b[1;71H\u001b(B\u001b[0;7m        \u001b[24;80H\u001b(B\u001b[m\u001b[24;1H\u001b[?12l\u001b[?25h\u001b[?1049l\r\u001b[?1l\u001b>"
+    ],
+    [
+      0.000292,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    ],
+    [
+      9.2e-05,
+      "\u001b]2;cchampeau@cedric-XPS-15: ~/tmp/demo\u0007\u001b]1;~/tmp/demo\u0007"
+    ],
+    [
+      0.037866,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[44m\u001b[30m ~/tmp/demo \u001b[43m\u001b[34m\u001b[30m  step8 ● \u001b[49m\u001b[33m\u001b[39m \u001b[K"
+    ],
+    [
+      2.1e-05,
+      "\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      1.053778,
+      "g"
+    ],
+    [
+      0.080323,
+      "\bgl"
+    ],
+    [
+      0.206864,
+      " "
+    ],
+    [
+      0.094342,
+      "r"
+    ],
+    [
+      0.146224,
+      "u"
+    ],
+    [
+      0.042439,
+      "n"
+    ],
+    [
+      2.720353,
+      "\b \b"
+    ],
+    [
+      0.150406,
+      "\b \b"
+    ],
+    [
+      0.138876,
+      "\b \b"
+    ],
+    [
+      1.304462,
+      "j"
+    ],
+    [
+      0.129247,
+      "a"
+    ],
+    [
+      0.279011,
+      "v"
+    ],
+    [
+      0.059532,
+      "a"
+    ],
+    [
+      0.363461,
+      "9"
+    ],
+    [
+      0.341731,
+      "R"
+    ],
+    [
+      0.191957,
+      "u"
+    ],
+    [
+      0.059014,
+      "n"
+    ],
+    [
+      0.813958,
+      "\u001b[?1l\u001b>\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000489,
+      "\u001b]2;/home/cchampeau/DEV/gradle-source-build/bin/gradle java9Run\u0007\u001b]1;gl\u0007"
+    ],
+    [
+      0.224066,
+      "\u001b[0m"
+    ],
+    [
+      0.3826,
+      "\u001b[1m> Connecting to Daemon\u001b[22m"
+    ],
+    [
+      0.105517,
+      "\u001b[22D:buildSrc:compileJava \u001b[33mUP-TO-DATE\u001b[39m\r\n\u001b[1m> Loading > buildSrc > :buildSrc:compileGroovy\u001b[22m"
+    ],
+    [
+      1.388713,
+      "\u001b[46D:buildSrc:compileGroovy\u001b[0K\r\n\u001b[1m> Loading > buildSrc\u001b[22m\u001b[0K"
+    ],
+    [
+      0.0863,
+      "\u001b[20D:buildSrc:processResources \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:classes\r\n"
+    ],
+    [
+      0.000194,
+      ":buildSrc:jar\r\n:buildSrc:assemble\r\n:buildSrc:compileTestJava \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:compileTestGroovy \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:processTestResources \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:testClasses \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:test \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:check \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:build\r\n"
+    ],
+    [
+      2.8e-05,
+      "\u001b[1m> Configuring > 0/3 projects > root project\u001b[22m"
+    ],
+    [
+      0.085371,
+      "\u001b[43D\u001b[1m> Building 0% > :utils:compileJavaJava9\u001b[22m\u001b[0K"
+    ],
+    [
+      0.501063,
+      "\u001b[39D:utils:compileJavaJava9\u001b[0K\r\n\u001b[1m> Building 0%\u001b[22m\u001b[0K"
+    ],
+    [
+      0.085841,
+      "\u001b[13D:utils:compileJavaJava9ApiJar\r\n:core:compileJavaJava9 \u001b[33mUP-TO-DATE\u001b[39m\r\n:core:java9Jar \u001b[33mUP-TO-DATE\u001b[39m\r\n:utils:java9Jar\r\n\u001b[1m> Building 83% > :core:java9Run\u001b[22m"
+    ],
+    [
+      0.133171,
+      "\u001b[31D:core:java9Run\u001b[0K\r\nHello, JavaOne\r\n\r\nBUILD SUCCESSFUL\r\n\r\nTotal time: 2.883 secs\r\n\r\nPublishing build information...\r\n\u001b[0K"
+    ],
+    [
+      0.764688,
+      "\u001b[32mhttps://gradle.com/s/ztjd7qguwsaf4\u001b[39m\r\n"
+    ],
+    [
+      0.085232,
+      "\r\n"
+    ],
+    [
+      0.112035,
+      "\u001b[0m"
+    ],
+    [
+      0.319539,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    ],
+    [
+      1.6e-05,
+      "\u001b]2;cchampeau@cedric-XPS-15: ~/tmp/demo\u0007"
+    ],
+    [
+      9e-06,
+      "\u001b]1;~/tmp/demo\u0007"
+    ],
+    [
+      0.032722,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[44m\u001b[30m ~/tmp/demo \u001b[43m\u001b[34m\u001b[30m  step8 ● \u001b[49m\u001b[33m\u001b[39m \u001b[K\u001b[?1h\u001b="
+    ],
+    [
+      1.8e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      11.711935,
+      "$JAVA_HOME/bin/jar tvf utils/build/libs/utils-java9.jar\u001b[K"
+    ],
+    [
+      0.631331,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      1.9e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000563,
+      "\u001b]2;$JAVA_HOME/bin/jar tvf utils/build/libs/utils-java9.jar\u0007\u001b]1;$JAVA_HOME/bin/jar\u0007"
+    ],
+    [
+      0.069411,
+      "     0 Tue Sep 20 16:21:02 CEST 2016 META-INF/\r\n"
+    ],
+    [
+      7e-05,
+      "    25 Tue Sep 20 16:19:30 CEST 2016 META-INF/MANIFEST.MF"
+    ],
+    [
+      1.6e-05,
+      "\r\n"
+    ],
+    [
+      7.4e-05,
+      "     0 Tue Sep 20 16:19:30 CEST 2016 com/"
+    ],
+    [
+      1.6e-05,
+      "\r\n"
+    ],
+    [
+      8.1e-05,
+      "     0 Tue Sep 20 16:19:30 CEST 2016 com/acme/"
+    ],
+    [
+      1.5e-05,
+      "\r\n"
+    ],
+    [
+      7.5e-05,
+      "     0 Tue Sep 20 16:21:02 CEST 2016 com/acme/utils/"
+    ],
+    [
+      1.4e-05,
+      "\r\n"
+    ],
+    [
+      7.4e-05,
+      "     0 Tue Sep 20 16:21:02 CEST 2016 com/acme/utils/internal/"
+    ],
+    [
+      1.5e-05,
+      "\r\n"
+    ],
+    [
+      7.7e-05,
+      "   942 Tue Sep 20 16:21:02 CEST 2016 com/acme/utils/internal/DarkUtils.class"
+    ],
+    [
+      1.5e-05,
+      "\r\n"
+    ],
+    [
+      7.6e-05,
+      "   386 Tue Sep 20 16:21:02 CEST 2016 com/acme/utils/GreeterUtils.class"
+    ],
+    [
+      1.5e-05,
+      "\r\n"
+    ],
+    [
+      7.6e-05,
+      "   176 Tue Sep 20 16:21:02 CEST 2016 module-info.class"
+    ],
+    [
+      1.4e-05,
+      "\r\n"
+    ],
+    [
+      0.012053,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    ],
+    [
+      8.7e-05,
+      "\u001b]2;cchampeau@cedric-XPS-15: ~/tmp/demo\u0007\u001b]1;~/tmp/demo\u0007"
+    ],
+    [
+      0.034802,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[44m\u001b[30m ~/tmp/demo \u001b[43m\u001b[34m\u001b[30m  step8 ● \u001b[49m\u001b[33m\u001b[39m \u001b[K\u001b[?1h\u001b="
+    ],
+    [
+      2.6e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      5.918787,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ],
+  "title": null
+}

@@ -1,0 +1,898 @@
+{
+  "stdout": [
+    [
+      0.189112,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    ],
+    [
+      4.2e-05,
+      "\u001b]2;cchampeau@cedric-XPS-15: ~/tmp/demo\u0007\u001b]1;~/tmp/demo\u0007"
+    ],
+    [
+      0.033809,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[44m\u001b[30m ~/tmp/demo \u001b[43m\u001b[34m\u001b[30m  step2 \u001b[49m\u001b[33m\u001b[39m \u001b[K"
+    ],
+    [
+      0.000127,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      2.3e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      1.808035,
+      "c"
+    ],
+    [
+      0.174185,
+      "\bca"
+    ],
+    [
+      0.215803,
+      "t"
+    ],
+    [
+      0.24487,
+      " "
+    ],
+    [
+      0.666834,
+      "u"
+    ],
+    [
+      0.071807,
+      "t"
+    ],
+    [
+      0.19082,
+      "ils\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.292485,
+      "\b\u001b[0m/s"
+    ],
+    [
+      0.160703,
+      "r"
+    ],
+    [
+      0.13256,
+      "c\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.209181,
+      "\b\u001b[0m/main\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.313333,
+      "\b\u001b[0m/java\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.261422,
+      "\b\u001b[0m/com\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.363893,
+      "\b\u001b[0m/acme\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.225032,
+      "\b\u001b[0m/utils\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.377596,
+      "\u0007\b\u001b[0m/"
+    ],
+    [
+      1.5e-05,
+      "\r\r\n"
+    ],
+    [
+      2.1e-05,
+      "\u001b[J\u001b[0mGreeterUtils.java  \u001b[J\u001b[1;31minternal\u001b[0m/        \u001b[J\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[0m\u001b[27m\u001b[24m\u001b[39m\u001b[49m\r\u001b[24Ccat utils/src/main/java/com/acme/utils/\u001b[K\u001b[0m\u001b[27m\u001b[24m\u001b[39m\u001b[49m"
+    ],
+    [
+      0.375326,
+      "i"
+    ],
+    [
+      0.140876,
+      "nternal\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.634798,
+      "\b\u001b[0m/DarkUtils.java\u001b[1m \u001b[0m\u001b[K"
+    ],
+    [
+      0.86132,
+      "\b\u001b[K"
+    ],
+    [
+      1.8e-05,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      7.8e-05,
+      "\u001b[?2004l\r\r\n\u001b[J"
+    ],
+    [
+      0.000726,
+      "\u001b]2;cat utils/src/main/java/com/acme/utils/internal/DarkUtils.java\u0007\u001b]1;cat\u0007"
+    ],
+    [
+      0.001254,
+      "package com.acme.utils.internal;\r\nimport org.apache.commons.lang3.StringUtils;\r\n\r\n\r\npublic class DarkUtils {\r\n   public static String pretty(String str) {\r\n      return StringUtils.capitalize(str);\r\n   }\r\n}\r\n"
+    ],
+    [
+      0.000246,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    ],
+    [
+      0.000148,
+      "\u001b]2;cchampeau@cedric-XPS-15: ~/tmp/demo\u0007\u001b]1;~/tmp/demo\u0007"
+    ],
+    [
+      0.035437,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[44m\u001b[30m ~/tmp/demo \u001b[43m\u001b[34m\u001b[30m  step2 \u001b[49m\u001b[33m\u001b[39m \u001b[K"
+    ],
+    [
+      2.5e-05,
+      "\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      4.065549,
+      "n"
+    ],
+    [
+      0.059764,
+      "\bna"
+    ],
+    [
+      0.129026,
+      "n"
+    ],
+    [
+      0.198723,
+      "o"
+    ],
+    [
+      0.143572,
+      " "
+    ],
+    [
+      0.32364,
+      "c"
+    ],
+    [
+      0.124828,
+      "o"
+    ],
+    [
+      0.126262,
+      "r"
+    ],
+    [
+      0.173822,
+      "e\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.25077,
+      "\b\u001b[0m/s"
+    ],
+    [
+      0.198428,
+      "r"
+    ],
+    [
+      0.125343,
+      "c\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.166024,
+      "\b\u001b[0m/main\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.173962,
+      "\b\u001b[0m/java\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.169189,
+      "\b\u001b[0m/com\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.178537,
+      "\b\u001b[0m/acme\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.379014,
+      "\b\u001b[0m/core\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.476503,
+      "\b\u001b[0m/Main.java\u001b[1m \u001b[0m"
+    ],
+    [
+      0.48329,
+      "\b\u001b[0m \b"
+    ],
+    [
+      2e-05,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      4.9e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000525,
+      "\u001b]2;nano core/src/main/java/com/acme/core/Main.java\u0007\u001b]1;nano\u0007"
+    ],
+    [
+      0.014645,
+      "\u001b[?1049h\u001b[1;24r\u001b(B\u001b[m\u001b[4l\u001b[?7h\u001b[?1h\u001b=\u001b[?1h\u001b=\u001b[?1h\u001b="
+    ],
+    [
+      0.000612,
+      "\u001b[39;49m\u001b[?25l"
+    ],
+    [
+      0.000128,
+      "\u001b[39;49m\u001b(B\u001b[m\u001b[H\u001b[2J\u001b[22;33H\u001b(B\u001b[0;7m[ Reading File ]\r\u001b[3d\u001b(B\u001b[m"
+    ],
+    [
+      0.000178,
+      "\u001b[22;39H\u001b(B\u001b[0;7m 9 lines\r\u001b[12d\u001b(B\u001b[m"
+    ],
+    [
+      0.001524,
+      "\u001b[?12l\u001b[?25h"
+    ],
+    [
+      8.7e-05,
+      "\u001b[H\u001b[39;49m\u001b(B\u001b[0;7m  GNU nano 2.5.3   File: core/src/main/java/com/acme/core/Main.java             \u001b[3;1H\u001b(B\u001b[0m\u001b[36mpackage\u001b[39m\u001b(B\u001b[m com.acme.core;\u001b[42m\u001b[K\r\u001b[4d\u001b[49m\u001b[36mimport\u001b[39m\u001b(B\u001b[m com.acme.utils.GreeterUtils;\u001b[42m\u001b[K\r\u001b[5d\u001b[K\u001b[6d\u001b[49m\u001b[36mpublic\u001b[39m\u001b(B\u001b[m \u001b[36mclass\u001b[39m\u001b(B\u001b[m Main {\u001b[42m\u001b[K\u001b[7;5H\u001b[49m\u001b[36mpublic\u001b[39m\u001b(B\u001b[m \u001b[36mstatic\u001b[39m\u001b(B\u001b[m \u001b[32mvoid\u001b[39m\u001b(B\u001b[m main(String... args) {\u001b[42m\u001b[K\u001b[8;9H\u001b[49m\u001b(B\u001b[mSystem.out.println(GreeterUtils.defaultGreeting() + \u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[42m\u001b[K\u001b[9;5H\u001b[49m\u001b(B\u001b[m}\u001b[42m\u001b[K\r\u001b[10d\u001b[49m\u001b(B\u001b[m}\u001b[23d\b\u001b(B\u001b[0;7m^G\u001b(B\u001b[m Get Help  \u001b(B\u001b[0;7m^O\u001b(B\u001b[m Write Out \u001b(B\u001b[0;7m^W\u001b(B\u001b[m Where Is  \u001b(B\u001b[0;7m^K\u001b(B\u001b[m Cut Text  \u001b(B\u001b[0;7m^J\u001b(B\u001b[m Justify   \u001b(B\u001b[0;7m^C\u001b(B\u001b[m Cur Pos\r\u001b[24d\u001b(B\u001b[0;7m^X\u001b(B\u001b[m Exit\u001b[14G\u001b(B\u001b[0;7m^R\u001b(B\u001b[m Read File \u001b(B\u001b[0;7m^\\\u001b(B\u001b[m Replace   \u001b(B\u001b[0;7m^U\u001b(B\u001b[m Uncut Text\u001b(B\u001b[0;7m^T\u001b(B\u001b[m To Spell  \u001b(B\u001b[0;7m^_\u001b(B\u001b[m Go To Line\r\u001b[3d"
+    ],
+    [
+      1.784199,
+      "\u001b[4d"
+    ],
+    [
+      0.173669,
+      "\u001b[5d"
+    ],
+    [
+      0.701453,
+      "\u001b[1;71H\u001b(B\u001b[0;7mModified\r\u001b[5d\u001b(B\u001b[mi\u001b[80G$\u001b[5;2H"
+    ],
+    [
+      0.18005,
+      "m"
+    ],
+    [
+      0.169061,
+      "p"
+    ],
+    [
+      0.079417,
+      "o"
+    ],
+    [
+      0.059374,
+      "r"
+    ],
+    [
+      0.183679,
+      "\r\u001b[36mimport\u001b[39m\u001b(B\u001b[m"
+    ],
+    [
+      0.089711,
+      "\u001b[C"
+    ],
+    [
+      0.750635,
+      "\b c"
+    ],
+    [
+      0.079402,
+      "o"
+    ],
+    [
+      0.153622,
+      "m"
+    ],
+    [
+      0.286485,
+      "."
+    ],
+    [
+      0.16821,
+      "a"
+    ],
+    [
+      0.156636,
+      "c"
+    ],
+    [
+      0.09003,
+      "m"
+    ],
+    [
+      0.153467,
+      "e"
+    ],
+    [
+      0.129016,
+      "."
+    ],
+    [
+      0.292844,
+      "u"
+    ],
+    [
+      0.101917,
+      "t"
+    ],
+    [
+      0.168608,
+      "i"
+    ],
+    [
+      0.136939,
+      "l"
+    ],
+    [
+      0.142278,
+      "s"
+    ],
+    [
+      0.260211,
+      "."
+    ],
+    [
+      1.325366,
+      "i"
+    ],
+    [
+      0.08098,
+      "n\r\u001b[22d\u001b[K\u001b[5;25H"
+    ],
+    [
+      0.071871,
+      "\b\b\u001b[32mint\u001b[39m\u001b(B\u001b[m"
+    ],
+    [
+      0.099467,
+      "\b\b\binte"
+    ],
+    [
+      0.112143,
+      "r"
+    ],
+    [
+      0.156744,
+      "n"
+    ],
+    [
+      0.197858,
+      "a"
+    ],
+    [
+      0.145073,
+      "l"
+    ],
+    [
+      0.225285,
+      "."
+    ],
+    [
+      0.253273,
+      "D"
+    ],
+    [
+      0.152415,
+      "a"
+    ],
+    [
+      0.11911,
+      "r"
+    ],
+    [
+      0.128287,
+      "k"
+    ],
+    [
+      0.569591,
+      "U"
+    ],
+    [
+      0.13548,
+      "t"
+    ],
+    [
+      0.106043,
+      "i"
+    ],
+    [
+      0.083887,
+      "l"
+    ],
+    [
+      0.081489,
+      "s"
+    ],
+    [
+      0.196017,
+      ";"
+    ],
+    [
+      0.972762,
+      "\u001b7\u001b[5;22r\u001b8\r\u001bM\u001b[1;24r\u001b[5;1H\u001b[36mimport\u001b[39m\u001b(B\u001b[m com.acme.utils.internal.DarkUtils;\r\u001b[6d\u001b[42m\u001b[K\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.496534,
+      "\u001b[7d"
+    ],
+    [
+      0.138229,
+      "\u001b[8d"
+    ],
+    [
+      0.144543,
+      "\u001b[9d"
+    ],
+    [
+      0.142002,
+      "\u001b[10d"
+    ],
+    [
+      0.345693,
+      "\u001b[A$\u001b[72P\u001b[9G"
+    ],
+    [
+      0.182754,
+      "\b"
+    ],
+    [
+      0.499567,
+      "\u001b[1K System.out.println(GreeterUtils.defaultGreeting() + \u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[42m\u001b[K\u001b[79G\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.475092,
+      "\b"
+    ],
+    [
+      0.500677,
+      "\b"
+    ],
+    [
+      0.029477,
+      "\b"
+    ],
+    [
+      0.030298,
+      "\b"
+    ],
+    [
+      0.030183,
+      "\b"
+    ],
+    [
+      0.029946,
+      "\b"
+    ],
+    [
+      0.029685,
+      "\b"
+    ],
+    [
+      0.030113,
+      "\b"
+    ],
+    [
+      0.030483,
+      "\b"
+    ],
+    [
+      0.030094,
+      "\b"
+    ],
+    [
+      0.029988,
+      "\b"
+    ],
+    [
+      0.030674,
+      "\b"
+    ],
+    [
+      0.029641,
+      "\b"
+    ],
+    [
+      0.030311,
+      "\b"
+    ],
+    [
+      0.030082,
+      "\b"
+    ],
+    [
+      0.030784,
+      "\b"
+    ],
+    [
+      0.030287,
+      "\b"
+    ],
+    [
+      0.204643,
+      "\b"
+    ],
+    [
+      0.159357,
+      "\b"
+    ],
+    [
+      0.134203,
+      "\b"
+    ],
+    [
+      0.298816,
+      "\u001b7\u001b[10;22r\u001b8\r\u001b[10d\u001bM\u001b[1;24r\u001b[9;58H\u001b[42m \u001b[49m\u001b(B\u001b[m\u001b[K\r\u001b[10d+ \u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[42m         \r\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.34872,
+      " + \u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;23H\u001b[42m \r\u001b[C\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.499948,
+      "\b  + \u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;24H\u001b[42m \u001b[3G\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.029994,
+      "\r   + \u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;25H\u001b[42m \u001b[4G\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.030516,
+      "\r    + \u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;26H\u001b[42m \u001b[5G\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.030531,
+      "\r     + \u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;27H\u001b[42m \u001b[6G\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.172906,
+      "\r      + \u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;28H\u001b[42m \u001b[7G\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.193856,
+      "\r\u001b[7G + \u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;29H\u001b[42m \u001b[8G\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.178412,
+      "\r\u001b[8G + \u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;30H\u001b[42m \u001b[10;9H\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.382596,
+      "\r\u001b[10;9H + \u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;31H\u001b[42m \u001b[10;10H\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.303705,
+      "\r\u001b[10;10H + \u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;32H\u001b[42m \u001b[10;11H\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.185946,
+      "\r\u001b[10;11H + \u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;33H\u001b[42m \u001b[10;12H\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.169755,
+      "\r\u001b[10;12H + \u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;34H\u001b[42m \u001b[10;13H\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.170297,
+      "+"
+    ],
+    [
+      0.164927,
+      " "
+    ],
+    [
+      0.396861,
+      "D\u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;35H\u001b[42m \u001b[10;16H\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.160272,
+      "a\u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;36H\u001b[42m \u001b[10;17H\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.128173,
+      "r\u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;37H\u001b[42m \u001b[10;18H\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.899575,
+      "k\u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;38H\u001b[42m \u001b[10;19H\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.288261,
+      "U\u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;39H\u001b[42m \u001b[10;20H\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.104006,
+      "t\u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;40H\u001b[42m \u001b[10;21H\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.099699,
+      "i\u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;41H\u001b[42m \u001b[10;22H\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.071816,
+      "l\u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;42H\u001b[42m \u001b[10;23H\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.126965,
+      "s\u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;43H\u001b[42m \u001b[10;24H\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.159167,
+      ".\u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;44H\u001b[42m \u001b[10;25H\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.626273,
+      "p\u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;45H\u001b[42m \u001b[10;26H\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.08177,
+      "r\u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;46H\u001b[42m \u001b[10;27H\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.106545,
+      "e\u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;47H\u001b[42m \u001b[10;28H\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.17201,
+      "t\u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;48H\u001b[42m \u001b[10;29H\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.156913,
+      "\btt\u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;49H\u001b[42m \u001b[10;30H\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.073477,
+      "y\u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;50H\u001b[42m \u001b[10;31H\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.644136,
+      "(\u001b[31m\"javaOne\"\u001b[39m\u001b(B\u001b[m);\u001b[10;51H\u001b[42m \u001b[10;32H\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.444298,
+      "\u001b[C"
+    ],
+    [
+      1.183744,
+      "\u001b[C"
+    ],
+    [
+      0.200721,
+      "\u001b[C"
+    ],
+    [
+      0.138642,
+      "\u001b[C"
+    ],
+    [
+      0.139095,
+      "\u001b[C"
+    ],
+    [
+      0.131455,
+      "\u001b[C"
+    ],
+    [
+      0.139446,
+      "\u001b[C"
+    ],
+    [
+      0.145048,
+      "\u001b[C"
+    ],
+    [
+      0.148151,
+      "\u001b[C"
+    ],
+    [
+      0.805342,
+      "));\u001b[10;52H\u001b[42m \u001b[10;42H\u001b[49m\u001b(B\u001b[m"
+    ],
+    [
+      0.387816,
+      "\r\u001b[22d\u001b(B\u001b[0;7mSave modified buffer (ANSWERING \"No\" WILL DESTROY CHANGES) ?                    \u001b[23;1H Y\u001b(B\u001b[m Yes\u001b[K\r\u001b[24d\u001b(B\u001b[0;7m N\u001b(B\u001b[m No  \u001b[14G   \u001b(B\u001b[0;7m^C\u001b(B\u001b[m Cancel\u001b[K\u001b[22;62H"
+    ],
+    [
+      0.261162,
+      "\r\u001b(B\u001b[0;7mFile Name to Write: core/src/main/java/com/acme/core/Main.java\r\u001b[23d^G\u001b(B\u001b[m Get Help     \u001b(B\u001b[0;7mM-D\u001b(B\u001b[m DOS Format  \u001b(B\u001b[0;7mM-A\u001b(B\u001b[m Append\u001b[49G\u001b(B\u001b[0;7mM-B\u001b(B\u001b[m Backup File\r\u001b[24d\u001b(B\u001b[0;7m^C\u001b(B\u001b[m Cancel\u001b[17G\u001b(B\u001b[0;7mM-M\u001b(B\u001b[m Mac Format  \u001b(B\u001b[0;7mM-P\u001b(B\u001b[m Prepend     \u001b(B\u001b[0;7m^T\u001b(B\u001b[m To Files\u001b[22;63H"
+    ],
+    [
+      0.448308,
+      "\u001b[?25l"
+    ],
+    [
+      1.6e-05,
+      "\u001b[22;31H\u001b[39;49m\u001b(B\u001b[m\u001b[1K \u001b(B\u001b[0;7m[ Wrote 11 lines ]\u001b(B\u001b[m\u001b[K\u001b[10;42H"
+    ],
+    [
+      0.000113,
+      "\r\u001b[22d\u001b[J\u001b[1;71H\u001b(B\u001b[0;7m        \u001b[24;80H\u001b(B\u001b[m\u001b[24;1H\u001b[?12l\u001b[?25h\u001b[?1049l\r\u001b[?1l\u001b>"
+    ],
+    [
+      0.000269,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    ],
+    [
+      8.7e-05,
+      "\u001b]2;cchampeau@cedric-XPS-15: ~/tmp/demo\u0007\u001b]1;~/tmp/demo\u0007"
+    ],
+    [
+      0.032377,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[44m\u001b[30m ~/tmp/demo \u001b[43m\u001b[34m\u001b[30m  step2 ● \u001b[49m\u001b[33m\u001b[39m \u001b[K\u001b[?1h\u001b="
+    ],
+    [
+      2.3e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      1.727644,
+      "g"
+    ],
+    [
+      0.114183,
+      "\bgl"
+    ],
+    [
+      0.208696,
+      " "
+    ],
+    [
+      0.410783,
+      "r"
+    ],
+    [
+      0.108649,
+      "u"
+    ],
+    [
+      0.056736,
+      "n"
+    ],
+    [
+      1.423953,
+      "\u001b[?1l\u001b>\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000543,
+      "\u001b]2;/home/cchampeau/DEV/gradle-source-build/bin/gradle run\u0007\u001b]1;gl\u0007"
+    ],
+    [
+      0.21754,
+      "\u001b[0m"
+    ],
+    [
+      0.355041,
+      "\u001b[1m> Connecting to Daemon\u001b[22m"
+    ],
+    [
+      0.105541,
+      "\u001b[22D:buildSrc:compileJava \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:compileGroovy \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      7.7e-05,
+      "\u001b[1m> Loading > buildSrc > :buildSrc:processResources\u001b[22m"
+    ],
+    [
+      0.087729,
+      "\u001b[49D:buildSrc:processResources \u001b[33mUP-TO-DATE\u001b[39m\u001b[0K\r\n"
+    ],
+    [
+      4.5e-05,
+      ":buildSrc:classes \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:jar \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:assemble \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:compileTestJava \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      2.4e-05,
+      ":buildSrc:compileTestGroovy \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      3.8e-05,
+      ":buildSrc:processTestResources \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      6.7e-05,
+      ":buildSrc:testClasses \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      2.2e-05,
+      ":buildSrc:test \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      1.8e-05,
+      ":buildSrc:check \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      1.6e-05,
+      ":buildSrc:build \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      2.6e-05,
+      ":utils:compileJava \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      3.4e-05,
+      ":utils:processResources \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      1.8e-05,
+      ":utils:classes \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      2.2e-05,
+      ":utils:jar \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      2.4e-05,
+      "\u001b[1m> Building 44% > :core:compileJava\u001b[22m\u001b[0K"
+    ],
+    [
+      0.096934,
+      "\u001b[34D:core:compileJava\u001b[0K\r\n:core:processResources \u001b[33mUP-TO-DATE\u001b[39m\r\n:core:classes\r\n:core:jar\r\n:core:run\r\nHello, JavaOne\r\n\r\nBUILD SUCCESSFUL\r\n\r\nTotal time: 0.818 secs\r\n"
+    ],
+    [
+      3.6e-05,
+      "\r\nPublishing build information...\r\n\u001b[0K"
+    ],
+    [
+      3.687209,
+      "\u001b[32mhttps://gradle.com/s/sx43nh4brukyy\u001b[39m\r\n"
+    ],
+    [
+      0.085313,
+      "\r\n"
+    ],
+    [
+      0.101532,
+      "\u001b[0m"
+    ],
+    [
+      0.31826,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    ],
+    [
+      2.1e-05,
+      "\u001b]2;cchampeau@cedric-XPS-15: ~/tmp/demo\u0007"
+    ],
+    [
+      1e-05,
+      "\u001b]1;~/tmp/demo\u0007"
+    ],
+    [
+      0.034745,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[44m\u001b[30m ~/tmp/demo \u001b[43m\u001b[34m\u001b[30m  step2 ● \u001b[49m\u001b[33m\u001b[39m \u001b[K\u001b[?1h\u001b="
+    ],
+    [
+      4.2e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      0.723438,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ],
+  "title": null,
+  "width": 80,
+  "env": {
+    "SHELL": "/bin/zsh",
+    "TERM": "xterm-256color"
+  },
+  "command": null,
+  "version": 1,
+  "duration": 53.461517,
+  "height": 24
+}

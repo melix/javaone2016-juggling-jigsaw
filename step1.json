@@ -1,0 +1,610 @@
+{
+  "stdout": [
+    [
+      0.688288,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    ],
+    [
+      2.5e-05,
+      "\u001b]2;cchampeau@cedric-XPS-15: ~/tmp/demo\u0007\u001b]1;~/tmp/demo\u0007"
+    ],
+    [
+      0.030358,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[44m\u001b[30m ~/tmp/demo \u001b[43m\u001b[34m\u001b[30m  step1 \u001b[49m\u001b[33m\u001b[39m \u001b[K"
+    ],
+    [
+      9.3e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      1.6e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      0.858985,
+      "c"
+    ],
+    [
+      0.224865,
+      "\bca"
+    ],
+    [
+      0.256283,
+      "t"
+    ],
+    [
+      0.145964,
+      " "
+    ],
+    [
+      0.233165,
+      "s"
+    ],
+    [
+      0.188757,
+      "e"
+    ],
+    [
+      0.15911,
+      "t"
+    ],
+    [
+      0.154035,
+      "t"
+    ],
+    [
+      0.198637,
+      "ings.gradle\u001b[1m \u001b[0m"
+    ],
+    [
+      1.041662,
+      "\b\u001b[0m \b"
+    ],
+    [
+      2.8e-05,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      2.9e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000584,
+      "\u001b]2;cat settings.gradle\u0007\u001b]1;cat\u0007"
+    ],
+    [
+      0.001021,
+      "rootProject.name = 'jigsaw-demo'\r\n\r\ninclude 'core'\r\ninclude 'utils'\r\n\r\n"
+    ],
+    [
+      0.000138,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    ],
+    [
+      0.000113,
+      "\u001b]2;cchampeau@cedric-XPS-15: ~/tmp/demo\u0007\u001b]1;~/tmp/demo\u0007"
+    ],
+    [
+      0.036899,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[44m\u001b[30m ~/tmp/demo \u001b[43m\u001b[34m\u001b[30m  step1 \u001b[49m\u001b[33m\u001b[39m \u001b[K"
+    ],
+    [
+      5.7e-05,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      5.5e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      4.205155,
+      "c"
+    ],
+    [
+      0.22786,
+      "\bca"
+    ],
+    [
+      0.280862,
+      "t"
+    ],
+    [
+      0.346221,
+      " "
+    ],
+    [
+      0.130766,
+      "c"
+    ],
+    [
+      0.160664,
+      "o"
+    ],
+    [
+      0.105871,
+      "r"
+    ],
+    [
+      0.133175,
+      "e"
+    ],
+    [
+      0.407927,
+      "/"
+    ],
+    [
+      1.556893,
+      "b"
+    ],
+    [
+      0.367004,
+      "u"
+    ],
+    [
+      0.245761,
+      "ild.gradle\u001b[1m \u001b[0m"
+    ],
+    [
+      0.42074,
+      "\b\u001b[0m \b"
+    ],
+    [
+      1.9e-05,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      1e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000563,
+      "\u001b]2;cat core/build.gradle\u0007\u001b]1;cat\u0007"
+    ],
+    [
+      0.000974,
+      "repositories {\r\n    jcenter()\r\n}\r\n\r\ndependencies {\r\n    compile project(':utils')\r\n}\r\n\r\ntask run(type: JavaExec) {                                                      \r\n   dependsOn jar                                                                \r\n   classpath = files(jar.archivePath, configurations.compile)                   \r\n   main = 'com.acme.core.Main'                                                  \r\n}\r\n\r\n\r\n"
+    ],
+    [
+      0.000121,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    ],
+    [
+      7.4e-05,
+      "\u001b]2;cchampeau@cedric-XPS-15: ~/tmp/demo\u0007\u001b]1;~/tmp/demo\u0007"
+    ],
+    [
+      0.034747,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[44m\u001b[30m ~/tmp/demo \u001b[43m\u001b[34m\u001b[30m  step1 \u001b[49m\u001b[33m\u001b[39m \u001b[K"
+    ],
+    [
+      3.6e-05,
+      "\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      6.828246,
+      "c"
+    ],
+    [
+      0.339131,
+      "\bca"
+    ],
+    [
+      0.263963,
+      "t"
+    ],
+    [
+      0.376054,
+      " "
+    ],
+    [
+      0.808336,
+      "u"
+    ],
+    [
+      0.139418,
+      "t"
+    ],
+    [
+      0.855538,
+      "ils\u001b[1m/\u001b[0m"
+    ],
+    [
+      1.272098,
+      "\b\u001b[0m/b"
+    ],
+    [
+      0.143984,
+      "u"
+    ],
+    [
+      0.183382,
+      "ild.gradle\u001b[1m \u001b[0m"
+    ],
+    [
+      1.043974,
+      "\b\u001b[0m \b"
+    ],
+    [
+      2.5e-05,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      8.4e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000525,
+      "\u001b]2;cat utils/build.gradle\u0007\u001b]1;cat\u0007"
+    ],
+    [
+      0.001679,
+      "repositories {\r\n   jcenter()\r\n}\r\n\r\ndependencies {\r\n   compile 'org.apache.commons:commons-lang3:3.4'\r\n}\r\n\r\n\r\n"
+    ],
+    [
+      0.000122,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    ],
+    [
+      0.00012,
+      "\u001b]2;cchampeau@cedric-XPS-15: ~/tmp/demo\u0007"
+    ],
+    [
+      1.6e-05,
+      "\u001b]1;~/tmp/demo\u0007"
+    ],
+    [
+      0.034418,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[44m\u001b[30m ~/tmp/demo \u001b[43m\u001b[34m\u001b[30m  step1 \u001b[49m\u001b[33m\u001b[39m \u001b[K"
+    ],
+    [
+      3.7e-05,
+      "\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      6.595415,
+      "c"
+    ],
+    [
+      0.337292,
+      "\bca"
+    ],
+    [
+      0.257979,
+      "t"
+    ],
+    [
+      0.192415,
+      " "
+    ],
+    [
+      0.620701,
+      "c"
+    ],
+    [
+      0.15893,
+      "o"
+    ],
+    [
+      0.145899,
+      "re\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.324301,
+      "\b\u001b[0m/s"
+    ],
+    [
+      0.170719,
+      "r"
+    ],
+    [
+      0.152743,
+      "c\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.29584,
+      "\b\u001b[0m/main\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.338511,
+      "\b\u001b[0m/java\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.314857,
+      "\b\u001b[0m/com\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.347684,
+      "\b\u001b[0m/acme\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.323377,
+      "\b\u001b[0m/core\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.450204,
+      "\b\u001b[0m/Main.java\u001b[1m \u001b[0m"
+    ],
+    [
+      0.735158,
+      "\b\u001b[0m \b\u001b[?1l\u001b>"
+    ],
+    [
+      2.3e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000536,
+      "\u001b]2;cat core/src/main/java/com/acme/core/Main.java\u0007\u001b]1;cat\u0007"
+    ],
+    [
+      0.000901,
+      "package com.acme.core;                                                          \r\nimport com.acme.utils.GreeterUtils;                                             \r\n                                                                                \r\npublic class Main {                                                             \r\n    public static void main(String... args) {                                   \r\n        System.out.println(GreeterUtils.defaultGreeting() + \"javaOne\");         \r\n    }                                                                           \r\n}\r\n\r\n"
+    ],
+    [
+      0.000144,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    ],
+    [
+      4e-05,
+      "\u001b]2;cchampeau@cedric-XPS-15: ~/tmp/demo\u0007\u001b]1;~/tmp/demo\u0007"
+    ],
+    [
+      0.034887,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[44m\u001b[30m ~/tmp/demo \u001b[43m\u001b[34m\u001b[30m  step1 \u001b[49m\u001b[33m\u001b[39m \u001b[K"
+    ],
+    [
+      3.5e-05,
+      "\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      7.860737,
+      "c"
+    ],
+    [
+      0.226075,
+      "\bca"
+    ],
+    [
+      0.248603,
+      "t"
+    ],
+    [
+      0.546248,
+      " "
+    ],
+    [
+      0.488929,
+      "u"
+    ],
+    [
+      0.136669,
+      "t"
+    ],
+    [
+      0.227548,
+      "ils\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.795986,
+      "\b\u001b[0m/s"
+    ],
+    [
+      0.17342,
+      "r"
+    ],
+    [
+      0.17608,
+      "c\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.211498,
+      "\b\u001b[0m/main\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.209534,
+      "\b\u001b[0m/java\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.348322,
+      "\b\u001b[0m/com\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.325284,
+      "\b\u001b[0m/acme\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.389611,
+      "\b\u001b[0m/utils\u001b[1m/\u001b[0m"
+    ],
+    [
+      1.051837,
+      "\u0007\b\u001b[0m/\r\r\n"
+    ],
+    [
+      2.2e-05,
+      "\u001b[J\u001b[0mGreeterUtils.java  \u001b[J\u001b[1;31minternal\u001b[0m/        \u001b[J\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[0m\u001b[27m\u001b[24m\u001b[39m\u001b[49m\r\u001b[24Ccat utils/src/main/java/com/acme/utils/\u001b[K\u001b[0m\u001b[27m\u001b[24m\u001b[39m\u001b[49m"
+    ],
+    [
+      0.921844,
+      "G"
+    ],
+    [
+      0.408402,
+      "reeterUtils.java\u001b[1m \u001b[0m\u001b[K"
+    ],
+    [
+      0.607826,
+      "\r\u001b[K"
+    ],
+    [
+      2.7e-05,
+      "\u001b[?1l\u001b>\u001b[?2004l\r\r\n\u001b[J"
+    ],
+    [
+      0.000587,
+      "\u001b]2;cat utils/src/main/java/com/acme/utils/GreeterUtils.java\u0007\u001b]1;cat\u0007"
+    ],
+    [
+      0.000925,
+      "package com.acme.utils;\r\n\r\npublic class GreeterUtils {\r\n    public static String defaultGreeting() {\r\n        return \"Hello, \";\r\n    }\r\n}\r\n"
+    ],
+    [
+      0.000137,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    ],
+    [
+      4.8e-05,
+      "\u001b]2;cchampeau@cedric-XPS-15: ~/tmp/demo\u0007\u001b]1;~/tmp/demo\u0007"
+    ],
+    [
+      0.032775,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[44m\u001b[30m ~/tmp/demo \u001b[43m\u001b[34m\u001b[30m  step1 \u001b[49m\u001b[33m\u001b[39m \u001b[K\u001b[?1h\u001b="
+    ],
+    [
+      2.2e-05,
+      "\u001b[?2004h"
+    ],
+    [
+      6.054276,
+      "g"
+    ],
+    [
+      0.107598,
+      "\bgl"
+    ],
+    [
+      0.397887,
+      " "
+    ],
+    [
+      0.334776,
+      "r"
+    ],
+    [
+      0.171715,
+      "u"
+    ],
+    [
+      0.091226,
+      "n"
+    ],
+    [
+      0.731163,
+      "\u001b[?1l\u001b>"
+    ],
+    [
+      2.2e-05,
+      "\u001b[?2004l\r\r\n"
+    ],
+    [
+      0.000458,
+      "\u001b]2;/home/cchampeau/DEV/gradle-source-build/bin/gradle run\u0007\u001b]1;gl\u0007"
+    ],
+    [
+      0.223464,
+      "\u001b[0m"
+    ],
+    [
+      0.356375,
+      "\u001b[1m> Connecting to Daemon\u001b[22m"
+    ],
+    [
+      0.103588,
+      "\u001b[22D\u001b[1m> Loading > buildSrc\u001b[22m\u001b[0K"
+    ],
+    [
+      0.09198,
+      "\u001b[20D:buildSrc:compileJava \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      0.000107,
+      ":buildSrc:compileGroovy \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:processResources \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:classes \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:jar \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:assemble \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:compileTestJava \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      4.6e-05,
+      ":buildSrc:compileTestGroovy \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      4.2e-05,
+      ":buildSrc:processTestResources \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      4.2e-05,
+      ":buildSrc:testClasses \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:test \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      4e-05,
+      ":buildSrc:check \u001b[33mUP-TO-DATE\u001b[39m\r\n:buildSrc:build \u001b[33mUP-TO-DATE\u001b[39m\r\n"
+    ],
+    [
+      4.1e-05,
+      "\u001b[1m> Configuring > 3/3 projects\u001b[22m"
+    ],
+    [
+      0.08846,
+      "\u001b[28D\u001b[1m> Building 0% > :utils:compileJava\u001b[22m"
+    ],
+    [
+      0.244849,
+      "\u001b[34D:utils:compileJava\u001b[0K\r\n\u001b[1m> Building 0%\u001b[22m\u001b[0K"
+    ],
+    [
+      0.085731,
+      "\u001b[13D:utils:processResources \u001b[33mUP-TO-DATE\u001b[39m\r\n:utils:classes\r\n"
+    ],
+    [
+      3.6e-05,
+      ":utils:jar\r\n:core:compileJava\r\n:core:processResources \u001b[33mUP-TO-DATE\u001b[39m\r\n:core:classes\r\n:core:jar\r\n\u001b[1m> Building 88% > :core:run\u001b[22m"
+    ],
+    [
+      0.085467,
+      "\u001b[26D:core:run\u001b[0K\r\nHello, javaOne\r\n\r\nBUILD SUCCESSFUL\r\n\r\nTotal time: 1.213 secs\r\n\r\nPublishing build information...\r\n\u001b[0K"
+    ],
+    [
+      1.094936,
+      "\u001b[32mhttps://gradle.com/s/56odz7dgndw3w\u001b[39m\r\n"
+    ],
+    [
+      0.085793,
+      "\r\n"
+    ],
+    [
+      0.121449,
+      "\u001b[0m"
+    ],
+    [
+      0.316909,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                               \r \r"
+    ],
+    [
+      2.7e-05,
+      "\u001b]2;cchampeau@cedric-XPS-15: ~/tmp/demo\u0007"
+    ],
+    [
+      1e-05,
+      "\u001b]1;~/tmp/demo\u0007"
+    ],
+    [
+      0.033051,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[39m\u001b[0m\u001b[49m\u001b[44m\u001b[30m ~/tmp/demo \u001b[43m\u001b[34m\u001b[30m  step1 \u001b[49m\u001b[33m\u001b[39m \u001b[K"
+    ],
+    [
+      2.8e-05,
+      "\u001b[?1h\u001b=\u001b[?2004h"
+    ],
+    [
+      2.863191,
+      "\u001b[?2004l\r\r\n"
+    ]
+  ],
+  "height": 24,
+  "title": null,
+  "duration": 66.016892,
+  "command": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "width": 80,
+  "version": 1
+}
