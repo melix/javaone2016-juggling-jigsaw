@@ -1,0 +1,5 @@
+rootProject.name = 'jigsaw-demo'
+
+include 'core'
+include 'utils'
+

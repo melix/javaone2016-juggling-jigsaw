@@ -1,0 +1,320 @@
+= Juggling Multiple Java Platforms and Jigsaw with Gradle
+Cédric Champeau (@CedricChampeau), Gradle Inc.
+2016-09-21
+:revnumber: {project-version}
+:example-caption!:
+ifndef::imagesdir[:imagesdir: images]
+ifndef::sourcedir[:sourcedir: ../java]
+:deckjs_transition: fade
+:navigation:
+:menu:
+:status:
+:adoctor: http://asciidoctor.org/[Asciidoctor]
+:gradle: http://gradle.org[Gradle]
+
+== Who am I
+
+image::nantes.jpg[background, size=cover]
+
+++++
+<style>
+.asciinema-terminal.font-medium {
+  font-size: 16px;
+}
+</style>
+
+<div class="pictureWrapper">
+   <div class="picture"><img src="images/mini-me.png"></div>
+</div>
+++++
+
+
+[source,groovy]
+----
+speaker {
+    name 'Cédric Champeau'
+    company 'Gradle Inc'
+    oss 'Apache Groovy committer',
+    successes 'Static type checker',
+                    'Static compilation',
+                    'Traits',
+                    'Markup template engine',
+                    'DSLs'
+        failures Stream.of(bugs),
+        twitter '@CedricChampeau',
+        github 'melix',
+        extraDescription '''Groovy in Action 2 co-author
+Misc OSS contribs (Gradle plugins, deck2pdf, jlangdetect, ...)'''
+}
+----
+
+== Groovy in Action 2
+
+image:koenig2.png[]
+
+https://www.manning.com/books/groovy-in-action-second-edition
+
+Coupon: groovyjo16 (42% off until Thursday)
+
+== What is Gradle?
+
+image::Mechaphant-Gradle.png[]
+
+=== Emerge from Build Hell
+
+* Unified, fast, reproducible builds
+* Cross-platform
+* Language agnostic
+
+* A Build Tool + Cloud Services
+
+== Project Jigsaw
+image::puzzle.jpg[background, size=cover]
+
+=== Project Jigsaw
+
+* Modularity for the Java platform
+** *Reliable configuration* (goodbye _classpath_)
+** *Strong encapsulation* (goodbye _com.sun_)
+* Enforce strict boundaries between modules
+** compile-time
+** run-time
+
+== Jigsaw modules
+
+=== Declaring a module
+
+.module-info.java
+[source,java]
+----
+module com.foo.bar {
+    requires org.baz.qux;
+    exports com.foo.bar.alpha;
+    exports com.foo.bar.beta;
+}
+----
+
+=== A module
+
+* Declares dependencies onto other modules
+** optionally transitive (`public`)
+* Declares a list of packages it exports
+* will be found on _modulepath_
+
+== Why it's going to break your apps
+
+* Exports are package based
+* A non-exported package is not visible to consumers
+* 2 modules cannot export the same packages
+* 2 modules cannot have the same internal packages
+
+Death to *split packages*.
+
+== How Gradle will help?
+
+* Find a _smooth migration path_
+* Prepare today, migrate when ready
+
+== Disclaimer
+
+image::dangerous-road.jpg[background, size=cover]
+
+++++
+<div style="color:yellow">
+++++
+
+* Work in progress
+* Will be backported to current model
+* Requires Gradle 3.0+
+* Works with JDK 9 b119
+* Breaks with JDK 9 b136
+
+++++
+</div>
+++++
+
+== A simple project
+
+screencast:step1[]
+
+== Internal APIs
+
+screencast:step2[]
+
+== Internal APIs maintenance nightmare
+
+=== The "Jigsaw" plugin
+
+* _WIP_
+* creates _additional_ configurations for each platform
+* adds support for API
+* APIs enforced on JDK < 9 too
+
+=== Demo
+
+screencast:step3[]
+
+== Declaring internal APIs
+
+=== How to declare
+
+screencast:step4[]
+
+=== Compilation fails!
+
+https://gradle.com/s/xwktle5a6xfgw
+
+== Compile avoidance
+
+screencast:step5[]
+
+=== Build scan
+
+https://gradle.com/s/6tlwxiqmjxi4a
+
+=== Compile avoidance benefits
+
+* Doesn't recompile dependents if:
+** method body changes
+** parameter names change
+** method order changes
+** private method added/removed
+* In short: if API stable, do nothing
+
+== Declaring target platforms
+
+screencast:step6[]
+
+=== Build scans
+
+* `run` only compiled the Java 8 variant of `utils`: https://gradle.com/s/mm2nlbuefyqje
+* `compileJavaJava7` only compiled the Java 7 variant of `utils`: https://gradle.com/s/e6d3mnbxs7zkk
+
+== Running on multiple platforms
+
+[source,groovy]
+----
+task run {}
+platforms.targetPlatforms.each { platform ->
+    def platformRun = task "${platform}Run"(type: JavaExec) {
+        dependsOn "${platform}Jar"
+        classpath = files(tasks."${platform}Jar".archivePath, 
+                          configurations."runtime${platform.capitalize()}")
+        executable = "${platforms.jdkFor(platform)}/bin/java"
+        main = 'com.acme.core.Main'
+    }
+    run.dependsOn(platformRun)
+}
+----
+
+== Why does Gradle help?
+
+* Add `targetPlatform 'java9'`
+* Generate module descriptor automatically?
+* Profit!
+
+== Trying it out
+
+screencast:step7[]
+
+== Automatically generating `module-info.java`?
+
+screencast:step8[]
+
+== Multi-release jars
+
+* *Good idea*: provide different versions of classes depending on runtime
+* *Bad idea*: in general, dependencies will be different so should be different artifacts
+* But let's give it a try...
+
+=== Creating a MRJAR
+
+[source,groovy]
+----
+task multireleaseJar(type:Jar) {
+    dependsOn compileJavaJava7, compileJavaJava9
+    baseName = "${project.name}-multi"
+    from compileJavaJava7.destinationDir
+    into('META-INF/versions/9') {
+       from compileJavaJava9.destinationDir
+    }
+    manifest.attributes('Multi-Release': 'true')
+}
+----
+
+=== Fixing the `run` configurations
+
+[source,groovy]
+----
+platforms.targetPlatforms.each { platform ->
+    def platformRun = task "${platform}Run"(type: JavaExec) {
+        dependsOn multireleaseJar
+        classpath = files(multireleaseJar.archivePath,
+                          configurations."runtime${platform.capitalize()}")
+        executable = "${platforms.jdkFor(platform)}/bin/java"
+        main = 'com.acme.core.Main'
+    }
+    run.dependsOn(platformRun)
+}
+----
+
+=== Create version specific classes
+
+screencast:step9[]
+
+== What's next?
+
+* Making this a first class citizen in Gradle
+* Automatic toolchain selection
+* Toolchain provisioning
+* Support for `modulepath`
+* Support for `jimage` and `jlink`
+
+== Be involved
+
+* Specs can be found on https://github.com/gradle/gradle/blob/master/design-docs/jdk9-support.md[our GitHub repo]
+
+[%notitle]
+== Questions
+
+image::questions.jpg[background, size=cover]
+
+== Free webinars
+
+=== EXPLORE THE LATEST FEATURES IN GRADLE CLOUD SERVICES
+
+September 28th, 2016 - 11am PDT / 2 pm EDT
+
+By Mark Vieira (Principal Engineer at Gradle Inc) 
+
+RSVP: https://goo.gl/yFsgLD     
+
+Learn how to use Gradle Cloud Services to substantially improve the process of troubleshooting build/test failures, performance tuning of your builds, and analyzing your dependencies and plugins.
+
+The latest release of Gradle Cloud Services will be available end of September. We would like to invite you to a 20 minutes webinar featuring what is new on Wednesday, September 28. 
+
+=== FREE LIVE TRAINING: INTRODUCTION TO GRADLE
+
+Wed - Thurs October 26 - 27 8:30am - 12:30pm PDT
+
+By Gary Hale (Principal Engineer at Gradle Inc)
+
+RSVP: https://goo.gl/L6mKg4
+
+Get hands-on training taught live by a Gradle core developer on the fundamentals features of Gradle in 8 hours.
+
+We are very excited to announce a one-time offer to attend Gradle Inc’s Introduction to Gradle Training for FREE! For the last few years we have been charging $700-$900 per seat for our live, virtual Introduction to Gradle training. Don’t miss this chance to get a free seat to one our most popular training classes. 
+
+== We're hiring!
+
+http://gradle.org/gradle-jobs/
+
+image::GradleLogoLarge.png[]
+
+== Thank you!
+
+* Slides and code : https://github.com/melix/javaone2016-jigsaw-gradle
+* Gradle documentation : http://gradle.org/documentation/
+* State of the module system: http://openjdk.java.net/projects/jigsaw/spec/sotms
+* Follow me: http://twitter.com/CedricChampeau[@CedricChampeau]
+

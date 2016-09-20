@@ -1,0 +1,35 @@
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile project(':utils')
+}
+
+platforms {
+   targetPlatforms 'java7', 'java8', 'java9'
+}
+
+task multireleaseJar(type:Jar) {
+    dependsOn compileJavaJava7, compileJavaJava9
+    baseName = "${project.name}-multi"
+    from compileJavaJava7.destinationDir
+    into('META-INF/versions/9') {
+       from compileJavaJava9.destinationDir
+    }
+    manifest.attributes('Multi-Release': 'true')
+}
+
+task run {}
+
+platforms.targetPlatforms.each { platform ->
+    def platformRun = task "${platform}Run"(type: JavaExec) {
+        dependsOn multireleaseJar
+        classpath = files(multireleaseJar.archivePath,
+                          configurations."runtime${platform.capitalize()}")
+        executable = "${platforms.jdkFor(platform)}/bin/java"
+        main = 'com.acme.core.Main'
+    }
+    run.dependsOn(platformRun)
+}
+
