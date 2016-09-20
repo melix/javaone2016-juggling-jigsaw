@@ -313,7 +313,7 @@ image::GradleLogoLarge.png[]
 
 == Thank you!
 
-* Slides and code : https://github.com/melix/javaone2016-jigsaw-gradle
+* Slides and code : https://github.com/melix/javaone2016-juggling-jigsaw
 * Gradle documentation : http://gradle.org/documentation/
 * State of the module system: http://openjdk.java.net/projects/jigsaw/spec/sotms
 * Follow me: http://twitter.com/CedricChampeau[@CedricChampeau]
