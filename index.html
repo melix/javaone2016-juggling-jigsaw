@@ -40,42 +40,42 @@ Misc OSS contribs (Gradle plugins, deck2pdf, jlangdetect, ...)'''
 <section id="ow-gradle-will-help"><h2>How Gradle will help?</h2><div class="ulist"><ul><li><p>Find a <em>smooth migration path</em></p></li><li><p>Prepare today, migrate when ready</p></li></ul></div></section>
 <section id="isclaimer" data-background-image="./images/dangerous-road.jpg" data-background-size="cover"><h2>Disclaimer</h2>
 <div style="color:yellow">
-<div class="ulist"><ul><li><p>Work in progress</p></li><li><p>Will be backported to current model</p></li><li><p>Requires Gradle 3.0+</p></li><li><p>Works with JDK 9 b119</p></li><li><p>Breaks with JDK 9 b136</p></li></ul></div>
+<div class="ulist"><ul><li><p>Work in progress</p></li><li><p>Backport from the software model</p></li><li><p>Running Gradle on Jigsaw requires Gradle 3.0+</p></li><li><p>Works with JDK 9 b119</p></li><li><p>Breaks with JDK 9 b136</p></li><li><p>Running those samples require <code>master</code></p></li></ul></div>
 </div></section>
 <section id="-simple-project"><h2>A simple project</h2><div class="paragraph"><p>
-<div id="player-container-0c16dbec-73a8-4cff-863b-4a8c6b05a99b"></div>
+<div id="player-container-3fb13e4d-2839-411e-a824-2b90866341cf"></div>
   <script>
-    asciinema_player.core.CreatePlayer('player-container-0c16dbec-73a8-4cff-863b-4a8c6b05a99b', 'step1.json', { width: 114, height: 24, fontSize: 'medium' });
+    asciinema_player.core.CreatePlayer('player-container-3fb13e4d-2839-411e-a824-2b90866341cf', 'step1.json', { width: 114, height: 24, fontSize: 'medium' });
   </script>
 </p></div></section>
 <section id="nternal-apis"><h2>Internal APIs</h2><div class="paragraph"><p>
-<div id="player-container-fe3ebb7e-3d0d-44d6-a2f5-787c19a4d5ee"></div>
+<div id="player-container-dd058aed-9611-4cad-b49b-c7036cb96db7"></div>
   <script>
-    asciinema_player.core.CreatePlayer('player-container-fe3ebb7e-3d0d-44d6-a2f5-787c19a4d5ee', 'step2.json', { width: 114, height: 24, fontSize: 'medium' });
+    asciinema_player.core.CreatePlayer('player-container-dd058aed-9611-4cad-b49b-c7036cb96db7', 'step2.json', { width: 114, height: 24, fontSize: 'medium' });
   </script>
 </p></div></section>
 <section><section id="nternal-apis-maintenance-nightmare"><h2>Internal APIs maintenance nightmare</h2></section><section id="he-jigsaw-plugin"><h2>The "Jigsaw" plugin</h2><div class="ulist"><ul><li><p><em>WIP</em></p></li><li><p>creates <em>additional</em> configurations for each platform</p></li><li><p>adds support for API</p></li><li><p>APIs enforced on JDK &lt; 9 too</p></li></ul></div></section><section id="emo"><h2>Demo</h2><div class="paragraph"><p>
-<div id="player-container-2d644a24-b498-4458-9c0a-682c996131f5"></div>
+<div id="player-container-05446b4d-38a8-45ba-a04e-131342fec3b2"></div>
   <script>
-    asciinema_player.core.CreatePlayer('player-container-2d644a24-b498-4458-9c0a-682c996131f5', 'step3.json', { width: 114, height: 24, fontSize: 'medium' });
+    asciinema_player.core.CreatePlayer('player-container-05446b4d-38a8-45ba-a04e-131342fec3b2', 'step3.json', { width: 114, height: 24, fontSize: 'medium' });
   </script>
 </p></div></section></section>
 <section><section id="eclaring-internal-apis"><h2>Declaring internal APIs</h2></section><section id="ow-to-declare"><h2>How to declare</h2><div class="paragraph"><p>
-<div id="player-container-a51d2957-0ecf-4157-ac6f-532426ecadcc"></div>
+<div id="player-container-e20ba072-dcad-4b65-a9cc-8fa1e9793bb8"></div>
   <script>
-    asciinema_player.core.CreatePlayer('player-container-a51d2957-0ecf-4157-ac6f-532426ecadcc', 'step4.json', { width: 114, height: 24, fontSize: 'medium' });
+    asciinema_player.core.CreatePlayer('player-container-e20ba072-dcad-4b65-a9cc-8fa1e9793bb8', 'step4.json', { width: 114, height: 24, fontSize: 'medium' });
   </script>
 </p></div></section><section id="ompilation-fails"><h2>Compilation fails!</h2><div class="paragraph"><p><a href="https://gradle.com/s/xwktle5a6xfgw" class="bare">https://gradle.com/s/xwktle5a6xfgw</a></p></div></section></section>
 <section><section id="ompile-avoidance"><h2>Compile avoidance</h2><div class="paragraph"><p>
-<div id="player-container-f2a5d1a2-05bd-456d-893d-900fcd579d3a"></div>
+<div id="player-container-7846d46b-fa7e-4d81-891e-666acd007c88"></div>
   <script>
-    asciinema_player.core.CreatePlayer('player-container-f2a5d1a2-05bd-456d-893d-900fcd579d3a', 'step5.json', { width: 114, height: 24, fontSize: 'medium' });
+    asciinema_player.core.CreatePlayer('player-container-7846d46b-fa7e-4d81-891e-666acd007c88', 'step5.json', { width: 114, height: 24, fontSize: 'medium' });
   </script>
 </p></div></section><section id="uild-scan"><h2>Build scan</h2><div class="paragraph"><p><a href="https://gradle.com/s/6tlwxiqmjxi4a" class="bare">https://gradle.com/s/6tlwxiqmjxi4a</a></p></div></section><section id="ompile-avoidance-benefits"><h2>Compile avoidance benefits</h2><div class="ulist"><ul><li><p>Doesn&#8217;t recompile dependents if:</p><div class="ulist"><ul><li><p>method body changes</p></li><li><p>parameter names change</p></li><li><p>method order changes</p></li><li><p>private method added/removed</p></li></ul></div></li><li><p>In short: if API stable, do nothing</p></li></ul></div></section></section>
 <section><section id="eclaring-target-platforms"><h2>Declaring target platforms</h2><div class="paragraph"><p>
-<div id="player-container-d9919372-b772-48e0-8014-3d61e0741ce6"></div>
+<div id="player-container-3100a713-bc99-492c-a372-79a17362a537"></div>
   <script>
-    asciinema_player.core.CreatePlayer('player-container-d9919372-b772-48e0-8014-3d61e0741ce6', 'step6.json', { width: 114, height: 24, fontSize: 'medium' });
+    asciinema_player.core.CreatePlayer('player-container-3100a713-bc99-492c-a372-79a17362a537', 'step6.json', { width: 114, height: 24, fontSize: 'medium' });
   </script>
 </p></div></section><section id="uild-scans"><h2>Build scans</h2><div class="ulist"><ul><li><p><code>run</code> only compiled the Java 8 variant of <code>utils</code>: <a href="https://gradle.com/s/mm2nlbuefyqje" class="bare">https://gradle.com/s/mm2nlbuefyqje</a></p></li><li><p><code>compileJavaJava7</code> only compiled the Java 7 variant of <code>utils</code>: <a href="https://gradle.com/s/e6d3mnbxs7zkk" class="bare">https://gradle.com/s/e6d3mnbxs7zkk</a></p></li></ul></div></section></section>
 <section id="unning-on-multiple-platforms"><h2>Running on multiple platforms</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="groovy language-groovy">task run {}
@@ -91,15 +91,15 @@ platforms.targetPlatforms.each { platform -&gt;
 }</code></pre></div></div></section>
 <section id="hy-does-gradle-help"><h2>Why does Gradle help?</h2><div class="ulist"><ul><li><p>Add <code>targetPlatform 'java9'</code></p></li><li><p>Generate module descriptor automatically?</p></li><li><p>Profit!</p></li></ul></div></section>
 <section id="rying-it-out"><h2>Trying it out</h2><div class="paragraph"><p>
-<div id="player-container-041e299a-45d0-4dd2-884f-568f0e4c4fcc"></div>
+<div id="player-container-3686a002-6630-453e-b8c5-837515628bab"></div>
   <script>
-    asciinema_player.core.CreatePlayer('player-container-041e299a-45d0-4dd2-884f-568f0e4c4fcc', 'step7.json', { width: 114, height: 24, fontSize: 'medium' });
+    asciinema_player.core.CreatePlayer('player-container-3686a002-6630-453e-b8c5-837515628bab', 'step7.json', { width: 114, height: 24, fontSize: 'medium' });
   </script>
 </p></div></section>
 <section id="utomatically-generating-code-module-info-java-code"><h2>Automatically generating <code>module-info.java</code>?</h2><div class="paragraph"><p>
-<div id="player-container-6a7c5dc1-3b33-4ba8-a075-3ecd27856f26"></div>
+<div id="player-container-ae39501d-187f-4508-a9a5-807c134b766d"></div>
   <script>
-    asciinema_player.core.CreatePlayer('player-container-6a7c5dc1-3b33-4ba8-a075-3ecd27856f26', 'step8.json', { width: 114, height: 24, fontSize: 'medium' });
+    asciinema_player.core.CreatePlayer('player-container-ae39501d-187f-4508-a9a5-807c134b766d', 'step8.json', { width: 114, height: 24, fontSize: 'medium' });
   </script>
 </p></div></section>
 <section><section id="ulti-release-jars"><h2>Multi-release jars</h2><div class="ulist"><ul><li><p><strong>Good idea</strong>: provide different versions of classes depending on runtime</p></li><li><p><strong>Bad idea</strong>: in general, dependencies will be different so should be different artifacts</p></li><li><p>But let&#8217;s give it a try&#8230;&#8203;</p></li></ul></div></section><section id="reating-a-mrjar"><h2>Creating a MRJAR</h2><div class="listingblock"><div class="content"><pre class="highlight"><code class="groovy language-groovy">task multireleaseJar(type:Jar) {
@@ -120,9 +120,9 @@ platforms.targetPlatforms.each { platform -&gt;
     }
     run.dependsOn(platformRun)
 }</code></pre></div></div></section><section id="reate-version-specific-classes"><h2>Create version specific classes</h2><div class="paragraph"><p>
-<div id="player-container-48a48b13-5974-41d8-8823-e977015d60bd"></div>
+<div id="player-container-a692e38e-035f-401b-a385-88c37fb23fed"></div>
   <script>
-    asciinema_player.core.CreatePlayer('player-container-48a48b13-5974-41d8-8823-e977015d60bd', 'step9.json', { width: 114, height: 24, fontSize: 'medium' });
+    asciinema_player.core.CreatePlayer('player-container-a692e38e-035f-401b-a385-88c37fb23fed', 'step9.json', { width: 114, height: 24, fontSize: 'medium' });
   </script>
 </p></div></section></section>
 <section id="hat-s-next"><h2>What&#8217;s next?</h2><div class="ulist"><ul><li><p>Making this a first class citizen in Gradle</p></li><li><p>Automatic toolchain selection</p></li><li><p>Toolchain provisioning</p></li><li><p>Support for <code>modulepath</code></p></li><li><p>Support for <code>jimage</code> and <code>jlink</code></p></li></ul></div></section>
