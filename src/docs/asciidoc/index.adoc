@@ -124,10 +124,11 @@ image::dangerous-road.jpg[background, size=cover]
 ++++
 
 * Work in progress
-* Will be backported to current model
-* Requires Gradle 3.0+
+* Backport from the software model
+* Running Gradle on Jigsaw requires Gradle 3.0+
 * Works with JDK 9 b119
 * Breaks with JDK 9 b136
+* Running those samples require `master`
 
 ++++
 </div>
