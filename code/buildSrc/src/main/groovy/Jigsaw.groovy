@@ -1,4 +1,5 @@
 import groovy.transform.CompileStatic
+import groovy.transform.CompileDynamic
 import org.gradle.api.Action
 import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
@@ -7,6 +8,8 @@ import org.gradle.api.tasks.bundling.Jar
 import org.gradle.api.tasks.compile.JavaCompile
 import org.gradle.jvm.tasks.api.ApiJar
 import org.gradle.api.attributes.Attribute
+import org.gradle.api.tasks.SourceSet
+import org.gradle.api.plugins.JavaPluginConvention
 
 @CompileStatic
 class Jigsaw implements Plugin<Project> {
@@ -36,18 +39,26 @@ class Jigsaw implements Plugin<Project> {
             (PlatformsExtension) project.extensions.getByName('platforms')
         }
 
+        @CompileDynamic // Groovy bug
         public void configurePlatform(String platform) {
-            doConfigurePlatform((JavaCompile) project.tasks.getByName('compileJava'), platform)
+            project.convention.getPlugin(JavaPluginConvention).sourceSets.each { SourceSet sourceSet ->
+               def taskName = sourceSet.getCompileJavaTaskName()
+               doConfigurePlatform((JavaCompile) project.tasks.getByName(taskName), platform, sourceSet)
+            }
         }
 
-        private void doConfigurePlatform(JavaCompile compileTask, String platform) {
+        private void doConfigurePlatform(JavaCompile compileTask, String platform, SourceSet sourceSet) {
             def capitalizedPlatform = platform.capitalize()
+            if (project.configurations.findByName("compileClasspath${ capitalizedPlatform}")) {
+               return
+            }
+            
             def compileConfiguration = project.configurations.getByName('compile')
             def taskName = "${compileTask.name}$capitalizedPlatform"
-            def compilePlatformConfiguration = project.configurations.findByName("compileClasspath${ capitalizedPlatform}")?:project.configurations.create("compileClasspath${capitalizedPlatform}")
+            def compilePlatformConfiguration = project.configurations.create("compileClasspath${capitalizedPlatform}")
             compilePlatformConfiguration.attributes { it.attribute(API, 'api'); it.attribute(PLATFORM, platform) }
             compilePlatformConfiguration.extendsFrom compileConfiguration
-            def runtimePlatformConfiguration = project.configurations.findByName("runtime${capitalizedPlatform}")?:project.configurations.create("runtime${capitalizedPlatform}")
+            def runtimePlatformConfiguration = project.configurations.create("runtime${capitalizedPlatform}")
             runtimePlatformConfiguration.attributes { it.attribute(API, 'runtime'); it.attribute(PLATFORM, platform) }
             runtimePlatformConfiguration.extendsFrom compileConfiguration
             def platformCompile = project.tasks.create(taskName, JavaCompile, new Action<JavaCompile>() {
@@ -56,7 +67,7 @@ class Jigsaw implements Plugin<Project> {
                     task.options.fork = true
                     def level = "1.${platform - 'java'}"
                     String jdkHome = getPlatformsExtension().jdkFor(platform)
-                    task.options.forkOptions.executable = "$jdkHome/bin/javac"
+                    task.options.forkOptions.javaHome = new File(jdkHome)
                     task.sourceCompatibility = level
                     task.targetCompatibility = level
                     task.source(compileTask.source)
@@ -85,16 +96,16 @@ class Jigsaw implements Plugin<Project> {
             }
 
             if (platform=='java9' && apiExtension.moduleName) {
-                addJigsawModuleFile(taskName, platformCompile, apiExtension)
+                addJigsawModuleFile(taskName, platformCompile, apiExtension, sourceSet)
             }
         }
 
-        private void addJigsawModuleFile(String taskName, JavaCompile platformCompile, ApiExtension extension) {
+        private void addJigsawModuleFile(String taskName, JavaCompile platformCompile, ApiExtension extension, SourceSet sourceSet) {
             println "Jigsaw enabled"
             def genDir = new File("$project.buildDir/generated-sources/${taskName}/src/main/jigsaw")
             platformCompile.source(project.files(genDir))
             platformCompile.inputs.properties(exports: extension.exports)
-            platformCompile.options.compilerArgs.addAll(['--module-path', platformCompile.classpath.asPath, '--source-path', "$genDir:$project.projectDir/src/main/java".toString() ])
+            platformCompile.options.compilerArgs.addAll(['--module-path', platformCompile.classpath.asPath, '--source-path', "$genDir:${sourceSet.java.srcDirs.join(':')}".toString() ])
             platformCompile.doFirst {
                 genDir.mkdirs()
                 def requires = project.configurations.getByName('compile').files.collect { "   requires ${automaticModule(it.name)};" }.join('\n')

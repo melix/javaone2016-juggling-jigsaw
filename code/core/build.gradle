@@ -20,16 +20,26 @@ task multireleaseJar(type:Jar) {
     manifest.attributes('Multi-Release': 'true')
 }
 
+task runMr {}
 task run {}
 
 platforms.targetPlatforms.each { platform ->
-    def platformRun = task "${platform}Run"(type: JavaExec) {
+    def platformRun = task "${platform}RunMrJar"(type: JavaExec) {
         dependsOn multireleaseJar
         classpath = files(multireleaseJar.archivePath,
                           configurations."runtime${platform.capitalize()}")
         executable = "${platforms.jdkFor(platform)}/bin/java"
         main = 'com.acme.core.Main'
     }
-    run.dependsOn(platformRun)
+    runMr.dependsOn(platformRun)
+    def platformJar = tasks.findByName("${platform}Jar")
+    def platformRun2 = task "${platform}Run"(type: JavaExec) {
+        dependsOn platformJar
+        classpath = files(platformJar.archivePath, configurations."runtime${platform.capitalize()}")
+        executable = "${platforms.jdkFor(platform)}/bin/java"
+        main = 'com.acme.core.Main'
+        doFirst { println classpath.asPath }
+    }
+    run.dependsOn(platformRun2)
 }
 
