@@ -6,15 +6,19 @@ import org.gradle.api.Project
 import org.gradle.api.tasks.bundling.Jar
 import org.gradle.api.tasks.compile.JavaCompile
 import org.gradle.jvm.tasks.api.ApiJar
+import org.gradle.api.attributes.Attribute
 
 @CompileStatic
 class Jigsaw implements Plugin<Project> {
+
+    private final static Attribute<String> API = Attribute.of('api', String)
+    private final static Attribute<String> PLATFORM = Attribute.of('platform', String)
 
     void apply(Project project) {
         ApiExtension apiExtension = (ApiExtension) project.extensions.create("api", ApiExtension)
         def configurer = new Configurer(project)
         PlatformsExtension platformsExtension = (PlatformsExtension) project.extensions.create("platforms", PlatformsExtension, configurer)
-        platformsExtension.targetPlatforms("java${JavaVersion.current().majorVersion}".toString())
+        //platformsExtension.targetPlatforms("java${JavaVersion.current().majorVersion}".toString())
     }
 
     public static class Configurer {
@@ -41,10 +45,10 @@ class Jigsaw implements Plugin<Project> {
             def compileConfiguration = project.configurations.getByName('compile')
             def taskName = "${compileTask.name}$capitalizedPlatform"
             def compilePlatformConfiguration = project.configurations.findByName("compileClasspath${ capitalizedPlatform}")?:project.configurations.create("compileClasspath${capitalizedPlatform}")
-            compilePlatformConfiguration.attributes(type: 'api', platform: platform)
+            compilePlatformConfiguration.attributes { it.attribute(API, 'api'); it.attribute(PLATFORM, platform) }
             compilePlatformConfiguration.extendsFrom compileConfiguration
             def runtimePlatformConfiguration = project.configurations.findByName("runtime${capitalizedPlatform}")?:project.configurations.create("runtime${capitalizedPlatform}")
-            runtimePlatformConfiguration.attributes(type: 'runtime', platform: platform)
+            runtimePlatformConfiguration.attributes { it.attribute(API, 'runtime'); it.attribute(PLATFORM, platform) }
             runtimePlatformConfiguration.extendsFrom compileConfiguration
             def platformCompile = project.tasks.create(taskName, JavaCompile, new Action<JavaCompile>() {
                 @Override
@@ -86,10 +90,11 @@ class Jigsaw implements Plugin<Project> {
         }
 
         private void addJigsawModuleFile(String taskName, JavaCompile platformCompile, ApiExtension extension) {
-            def genDir = new File("$project.buildDir/generates-sources/${taskName}/src/main/jigsaw")
+            println "Jigsaw enabled"
+            def genDir = new File("$project.buildDir/generated-sources/${taskName}/src/main/jigsaw")
             platformCompile.source(project.files(genDir))
             platformCompile.inputs.properties(exports: extension.exports)
-            platformCompile.options.compilerArgs.addAll(['-modulepath', platformCompile.classpath.asPath])
+            platformCompile.options.compilerArgs.addAll(['--module-path', platformCompile.classpath.asPath, '--source-path', "$genDir:$project.projectDir/src/main/java".toString() ])
             platformCompile.doFirst {
                 genDir.mkdirs()
                 def requires = project.configurations.getByName('compile').files.collect { "   requires ${automaticModule(it.name)};" }.join('\n')
